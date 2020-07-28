@@ -1,0 +1,13 @@
+[Unit]
+Description=DCMAnonymize
+After=syslog.target network.target remote-fs.target
+
+[Service]
+Type=simple
+WorkingDirectory=/home/hermes/anonymizer
+Restart=always
+LimitNOFILE=10000
+ExecStart=/usr/bin/storescp --fork --promiscuous -od "/home/hermes/anonymizer/incoming" +uf -xcs "/home/hermes/DCMAnonymize/anonymize.py" 5001
+
+[Install]
+WantedBy=multi-user.target
