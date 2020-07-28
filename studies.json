@@ -1,4 +1,1473 @@
 {
-  "Supplement142": {"RemovePrivateTags": true, "AnonymizeTag": {"AccessionNumber": {"action": "clear"}, "AcquisitionComments": {"action": "delete"}, "AcquisitionContextSequence": {"action": "delete"}, "AcquisitionDate": {"action": "delete"}, "AcquisitionDateTime": {"action": "delete"}, "AcquisitionDeviceProcessingDescription": {"action": "delete"}, "AcquisitionProtocolDescription": {"action": "delete"}, "AcquisitionTime": {"action": "delete"}, "ActualHumanPerformersSequence": {"action": "delete"}, "AdditionalPatientHistory": {"action": "delete"}, "AdmissionID": {"action": "delete"}, "AdmittingDate": {"action": "delete"}, "AdmittingDiagnosesCodeSequence": {"action": "delete"}, "AdmittingDiagnosesDescription": {"action": "delete"}, "AdmittingTime": {"action": "delete"}, "AffectedSOPInstanceUID": {"action": "delete"}, "Allergies": {"action": "delete"}, "Arbitrary": {"action": "delete"}, "AuthorObserverSequence": {"action": "delete"}, "BranchOfService": {"action": "delete"}, "CassetteID": {"action": "delete"}, "CommentsOnThePerformedProcedureStep": {"action": "delete"}, "ConcatenationUID": {"action": "regen"}, "ConfidentialityConstraintOnPatientDataDescription": {"action": "delete"}, "ContentCreatorName": {"action": "clear"}, "ContentCreatorIdentificationCodeSequence": {"action": "delete"}, "ContentDate": {"action": "clear"}, "ContentSequence": {"action": "delete"}, "ContentTime": {"action": "clear"}, "ContextGroupExtensionCreatorUID": {"action": "regen"}, "ContrastBolusAgent": {"action": "clear"}, "ContributionDescription": {"action": "delete"}, "CountryOfResidence": {"action": "delete"}, "CreatorVersionUID": {"action": "regen"}, "CurrentPatientLocation": {"action": "delete"}, "CurveDate": {"action": "delete"}, "CurveTime": {"action": "delete"}, "CustodialOrganizationSequence": {"action": "delete"}, "DataSetTrailingPadding": {"action": "delete"}, "DerivationDescription": {"action": "delete"}, "DetectorID": {"action": "delete"}, "DeviceSerialNumber": {"action": "delete"}, "DeviceUID": {"action": "regen"}, "DigitalSignatureUID": {"action": "delete"}, "DigitalSignaturesSequence": {"action": "delete"}, "DimensionOrganizationUID": {"action": "regen"}, "DischargeDiagnosisDescription": {"action": "delete"}, "DistributionAddress": {"action": "delete"}, "DistributionName": {"action": "delete"}, "DoseReferenceUID": {"action": "regen"}, "EthnicGroup": {"action": "delete"}, "FailedSOPInstanceUIDList": {"action": "regen"}, "FiducialUID": {"action": "regen"}, "FillerOrderNumberImagingServiceRequest": {"action": "clear"}, "FrameComments": {"action": "delete"}, "FrameOfReferenceUID": {"action": "regen"}, "GantryID": {"action": "delete"}, "GeneratorID": {"action": "delete"}, "GraphicAnnotationSequence": {"action": "hash"}, "HumanPerformerName": {"action": "delete"}, "HumanPerformerOrganization": {"action": "delete"}, "IconImageSequence": {"action": "delete"}, "IdentifyingComments": {"action": "delete"}, "ImageComments": {"action": "delete"}, "ImagePresentationComments": {"action": "delete"}, "ImagingServiceRequestComments": {"action": "delete"}, "Impressions": {"action": "delete"}, "InstanceCreatorUID": {"action": "regen"}, "InstitutionAddress": {"action": "delete"}, "InstitutionCodeSequence": {"action": "delete"}, "InstitutionName": {"action": "delete"}, "InstitutionalDepartmentName": {"action": "delete"}, "InsurancePlanIdentification": {"action": "delete"}, "IntendedRecipientsOfResultsIdentificationSequence": {"action": "delete"}, "InterpretationApproverSequence": {"action": "delete"}, "InterpretationAuthor": {"action": "delete"}, "InterpretationDiagnosisDescription": {"action": "delete"}, "InterpretationIDIssuer": {"action": "delete"}, "InterpretationRecorder": {"action": "delete"}, "InterpretationText": {"action": "delete"}, "InterpretationTranscriber": {"action": "delete"}, "IrradiationEventUID": {"action": "regen"}, "IssuerOfAdmissionID": {"action": "delete"}, "IssuerOfPatientID": {"action": "delete"}, "IssuerOfServiceEpisodeID": {"action": "delete"}, "LargePaletteColorLookupTableUID": {"action": "regen"}, "LastMenstrualDate": {"action": "delete"}, "MAC": {"action": "delete"}, "MediaStorageSOPInstanceUID": {"action": "regen"}, "MedicalAlerts": {"action": "delete"}, "MedicalRecordLocator": {"action": "delete"}, "MilitaryRank": {"action": "delete"}, "ModifiedAttributesSequence": {"action": "delete"}, "ModifiedImageDescription": {"action": "delete"}, "ModifyingDeviceID": {"action": "delete"}, "ModifyingDeviceManufacturer": {"action": "delete"}, "NameOfPhysiciansReadingStudy": {"action": "delete"}, "NamesOfIntendedRecipientsOfResults": {"action": "delete"}, "Occupation": {"action": "delete"}, "OperatorIdentificationSequence": {"action": "delete"}, "OperatorsName": {"action": "delete"}, "OriginalAttributesSequence": {"action": "delete"}, "OrderCallbackPhoneNumber": {"action": "delete"}, "OrderEnteredBy": {"action": "delete"}, "OrderEntererLocation": {"action": "delete"}, "OtherPatientIDs": {"action": "delete"}, "OtherPatientIDsSequence": {"action": "delete"}, "OtherPatientNames": {"action": "delete"}, "": {"action": "delete"}, "HistogramSequence": {"action": "delete"}, "OverlayDate": {"action": "delete"}, "OverlayTime": {"action": "delete"}, "PaletteColorLookupTableUID": {"action": "regen"}, "ParticipantSequence": {"action": "delete"}, "PatientAddress": {"action": "delete"}, "PatientComments": {"action": "delete"}, "PatientID": {"action": "clear"}, "PatientSexNeutered": {"action": "delete"}, "PatientState": {"action": "delete"}, "PatientTransportArrangements": {"action": "delete"}, "PatientAge": {"action": "delete"}, "PatientBirthDate": {"action": "clear"}, "PatientBirthName": {"action": "delete"}, "PatientBirthTime": {"action": "delete"}, "PatientInstitutionResidence": {"action": "delete"}, "PatientInsurancePlanCodeSequence": {"action": "delete"}, "PatientMotherBirthName": {"action": "delete"}, "PatientName": {"action": "clear"}, "PatientPrimaryLanguageCodeSequence": {"action": "delete"}, "PatientPrimaryLanguageModifierCodeSequence": {"action": "delete"}, "PatientReligiousPreference": {"action": "delete"}, "PatientSex": {"action": "clear"}, "PatientSize": {"action": "delete"}, "PatientTelephoneNumbers": {"action": "delete"}, "PatientWeight": {"action": "delete"}, "PerformedLocation": {"action": "delete"}, "PerformedProcedureStepDescription": {"action": "delete"}, "PerformedProcedureStepID": {"action": "delete"}, "PerformedProcedureStepStartDate": {"action": "delete"}, "PerformedProcedureStepStartTime": {"action": "delete"}, "PerformedStationAETitle": {"action": "delete"}, "PerformedStationGeographicLocationCodeSequence": {"action": "delete"}, "PerformedStationName": {"action": "delete"}, "PerformingPhysicianIdentificationSequence": {"action": "delete"}, "PerformingPhysicianName": {"action": "delete"}, "PersonAddress": {"action": "delete"}, "PersonIdentificationCodeSequence": {"action": "hash"}, "PersonName": {"action": "hash"}, "PersonTelephoneNumbers": {"action": "delete"}, "PhysicianApprovingInterpretation": {"action": "delete"}, "PhysiciansReadingStudyIdentificationSequence": {"action": "delete"}, "PhysiciansOfRecord": {"action": "delete"}, "PhysiciansOfRecordIdentificationSequence": {"action": "delete"}, "PlacerOrderNumberImagingServiceRequest": {"action": "clear"}, "PlateID": {"action": "delete"}, "PreMedication": {"action": "delete"}, "PregnancyStatus": {"action": "delete"}, "ProtocolName": {"action": "delete"}, "ReasonForTheImagingServiceRequest": {"action": "delete"}, "ReasonForStudy": {"action": "delete"}, "ReferencedDigitalSignatureSequence": {"action": "delete"}, "ReferencedFrameOfReferenceUID": {"action": "regen"}, "ReferencedGeneralPurposeScheduledProcedureStepTransactionUID": {"action": "regen"}, "ReferencedImageSequence": {"action": "delete"}, "ReferencedPatientSequence": {"action": "delete"}, "ReferencedPerformedProcedureStepSequence": {"action": "delete"}, "ReferencedSOPInstanceMACSequence": {"action": "delete"}, "ReferencedSOPInstanceUID": {"action": "regen"}, "ReferencedSOPInstanceUIDInFile": {"action": "regen"}, "ReferencedStudySequence": {"action": "delete"}, "ReferringPhysicianAddress": {"action": "delete"}, "ReferringPhysicianIdentificationSequence": {"action": "delete"}, "ReferringPhysicianName": {"action": "clear"}, "ReferringPhysicianTelephoneNumbers": {"action": "delete"}, "RegionOfResidence": {"action": "delete"}, "RelatedFrameOfReferenceUID": {"action": "regen"}, "RequestAttributesSequence": {"action": "delete"}, "RequestedContrastAgent": {"action": "delete"}, "RequestedProcedureComments": {"action": "delete"}, "RequestedProcedureDescription": {"action": "delete"}, "RequestedProcedureID": {"action": "delete"}, "RequestedProcedureLocation": {"action": "delete"}, "RequestedSOPInstanceUID": {"action": "regen"}, "RequestingPhysician": {"action": "delete"}, "RequestingService": {"action": "delete"}, "ResponsibleOrganization": {"action": "delete"}, "ResponsiblePerson": {"action": "delete"}, "ResultsComments": {"action": "delete"}, "ResultsDistributionListSequence": {"action": "delete"}, "ResultsIDIssuer": {"action": "delete"}, "ReviewerName": {"action": "delete"}, "ScheduledHumanPerformersSequence": {"action": "delete"}, "ScheduledPatientInstitutionResidence": {"action": "delete"}, "ScheduledPerformingPhysicianIdentificationSequence": {"action": "delete"}, "ScheduledPerformingPhysicianName": {"action": "delete"}, "ScheduledProcedureStepEndDate": {"action": "delete"}, "ScheduledProcedureStepEndTime": {"action": "delete"}, "ScheduledProcedureStepDescription": {"action": "delete"}, "ScheduledProcedureStepLocation": {"action": "delete"}, "ScheduledProcedureStepStartDate": {"action": "delete"}, "ScheduledProcedureStepStartTime": {"action": "delete"}, "ScheduledStationAETitle": {"action": "delete"}, "ScheduledStationGeographicLocationCodeSequence": {"action": "delete"}, "ScheduledStationName": {"action": "delete"}, "ScheduledStationNameCodeSequence": {"action": "delete"}, "ScheduledStudyLocation": {"action": "delete"}, "ScheduledStudyLocationAETitle": {"action": "delete"}, "SeriesDate": {"action": "delete"}, "SeriesDescription": {"action": "delete"}, "SeriesInstanceUID": {"action": "regen"}, "SeriesTime": {"action": "delete"}, "ServiceEpisodeDescription": {"action": "delete"}, "ServiceEpisodeID": {"action": "delete"}, "SmokingStatus": {"action": "delete"}, "SOPInstanceUID": {"action": "regen"}, "SourceImageSequence": {"action": "delete"}, "SpecialNeeds": {"action": "delete"}, "StationName": {"action": "delete"}, "StorageMediaFileSetUID": {"action": "regen"}, "StudyComments": {"action": "delete"}, "StudyDate": {"action": "clear"}, "StudyDescription": {"action": "delete"}, "StudyID": {"action": "clear"}, "StudyIDIssuer": {"action": "delete"}, "StudyInstanceUID": {"action": "regen"}, "StudyTime": {"action": "clear"}, "SynchronizationFrameOfReferenceUID": {"action": "regen"}, "TemplateExtensionCreatorUID": {"action": "regen"}, "TemplateExtensionOrganizationUID": {"action": "regen"}, "TextComments": {"action": "delete"}, "TextString": {"action": "delete"}, "TimezoneOffsetFromUTC": {"action": "delete"}, "TopicAuthor": {"action": "delete"}, "TopicKeywords": {"action": "delete"}, "TopicSubject": {"action": "delete"}, "TopicTitle": {"action": "delete"}, "TransactionUID": {"action": "regen"}, "UID": {"action": "regen"}, "VerifyingObserverIdentificationCodeSequence": {"action": "clear"}, "VerifyingObserverName": {"action": "hash"}, "VerifyingObserverSequence": {"action": "hash"}, "VerifyingOrganization": {"action": "delete"}, "VisitComments": {"action": "delete"}}, "AnonymizeVR": {}},
-  "RESEARCH-LANDE": {"RemovePrivateTags": true, "AnonymizeTag": {"AccessionNumber": {"action": "clear"}, "AcquisitionComments": {"action": "delete"}, "AcquisitionContextSequence": {"action": "delete"}, "AcquisitionDate": {"action": "delete"}, "AcquisitionDateTime": {"action": "delete"}, "AcquisitionDeviceProcessingDescription": {"action": "delete"}, "AcquisitionProtocolDescription": {"action": "delete"}, "AcquisitionTime": {"action": "delete"}, "ActualHumanPerformersSequence": {"action": "delete"}, "AdditionalPatientHistory": {"action": "delete"}, "AdmissionID": {"action": "delete"}, "AdmittingDate": {"action": "delete"}, "AdmittingDiagnosesCodeSequence": {"action": "delete"}, "AdmittingDiagnosesDescription": {"action": "delete"}, "AdmittingTime": {"action": "delete"}, "AffectedSOPInstanceUID": {"action": "delete"}, "Allergies": {"action": "delete"}, "Arbitrary": {"action": "delete"}, "AuthorObserverSequence": {"action": "delete"}, "BranchOfService": {"action": "delete"}, "CassetteID": {"action": "delete"}, "CommentsOnThePerformedProcedureStep": {"action": "delete"}, "ConcatenationUID": {"action": "regen"}, "ConfidentialityConstraintOnPatientDataDescription": {"action": "delete"}, "ContentCreatorName": {"action": "clear"}, "ContentCreatorIdentificationCodeSequence": {"action": "delete"}, "ContentDate": {"action": "clear"}, "ContentSequence": {"action": "delete"}, "ContentTime": {"action": "clear"}, "ContextGroupExtensionCreatorUID": {"action": "regen"}, "ContrastBolusAgent": {"action": "clear"}, "ContributionDescription": {"action": "delete"}, "CountryOfResidence": {"action": "delete"}, "CreatorVersionUID": {"action": "regen"}, "CurrentPatientLocation": {"action": "delete"}, "CurveDate": {"action": "delete"}, "CurveTime": {"action": "delete"}, "CustodialOrganizationSequence": {"action": "delete"}, "DataSetTrailingPadding": {"action": "delete"}, "DerivationDescription": {"action": "delete"}, "DetectorID": {"action": "delete"}, "DeviceSerialNumber": {"action": "delete"}, "DeviceUID": {"action": "regen"}, "DigitalSignatureUID": {"action": "delete"}, "DigitalSignaturesSequence": {"action": "delete"}, "DimensionOrganizationUID": {"action": "regen"}, "DischargeDiagnosisDescription": {"action": "delete"}, "DistributionAddress": {"action": "delete"}, "DistributionName": {"action": "delete"}, "DoseReferenceUID": {"action": "regen"}, "EthnicGroup": {"action": "delete"}, "FailedSOPInstanceUIDList": {"action": "regen"}, "FiducialUID": {"action": "regen"}, "FillerOrderNumberImagingServiceRequest": {"action": "clear"}, "FrameComments": {"action": "delete"}, "FrameOfReferenceUID": {"action": "regen"}, "GantryID": {"action": "delete"}, "GeneratorID": {"action": "delete"}, "GraphicAnnotationSequence": {"action": "hash"}, "HumanPerformerName": {"action": "delete"}, "HumanPerformerOrganization": {"action": "delete"}, "IconImageSequence": {"action": "delete"}, "IdentifyingComments": {"action": "delete"}, "ImageComments": {"action": "delete"}, "ImagePresentationComments": {"action": "delete"}, "ImagingServiceRequestComments": {"action": "delete"}, "Impressions": {"action": "delete"}, "InstanceCreatorUID": {"action": "regen"}, "InstitutionAddress": {"action": "delete"}, "InstitutionCodeSequence": {"action": "delete"}, "InstitutionName": {"action": "delete"}, "InstitutionalDepartmentName": {"action": "delete"}, "InsurancePlanIdentification": {"action": "delete"}, "IntendedRecipientsOfResultsIdentificationSequence": {"action": "delete"}, "InterpretationApproverSequence": {"action": "delete"}, "InterpretationAuthor": {"action": "delete"}, "InterpretationDiagnosisDescription": {"action": "delete"}, "InterpretationIDIssuer": {"action": "delete"}, "InterpretationRecorder": {"action": "delete"}, "InterpretationText": {"action": "delete"}, "InterpretationTranscriber": {"action": "delete"}, "IrradiationEventUID": {"action": "regen"}, "IssuerOfAdmissionID": {"action": "delete"}, "IssuerOfPatientID": {"action": "delete"}, "IssuerOfServiceEpisodeID": {"action": "delete"}, "LargePaletteColorLookupTableUID": {"action": "regen"}, "LastMenstrualDate": {"action": "delete"}, "MAC": {"action": "delete"}, "MediaStorageSOPInstanceUID": {"action": "regen"}, "MedicalAlerts": {"action": "delete"}, "MedicalRecordLocator": {"action": "delete"}, "MilitaryRank": {"action": "delete"}, "ModifiedAttributesSequence": {"action": "delete"}, "ModifiedImageDescription": {"action": "delete"}, "ModifyingDeviceID": {"action": "delete"}, "ModifyingDeviceManufacturer": {"action": "delete"}, "NameOfPhysiciansReadingStudy": {"action": "delete"}, "NamesOfIntendedRecipientsOfResults": {"action": "delete"}, "Occupation": {"action": "delete"}, "OperatorIdentificationSequence": {"action": "delete"}, "OperatorsName": {"action": "delete"}, "OriginalAttributesSequence": {"action": "delete"}, "OrderCallbackPhoneNumber": {"action": "delete"}, "OrderEnteredBy": {"action": "delete"}, "OrderEntererLocation": {"action": "delete"}, "OtherPatientIDs": {"action": "delete"}, "OtherPatientIDsSequence": {"action": "delete"}, "OtherPatientNames": {"action": "delete"}, "": {"action": "delete"}, "HistogramSequence": {"action": "delete"}, "OverlayDate": {"action": "delete"}, "OverlayTime": {"action": "delete"}, "PaletteColorLookupTableUID": {"action": "regen"}, "ParticipantSequence": {"action": "delete"}, "PatientAddress": {"action": "delete"}, "PatientComments": {"action": "delete"}, "PatientID": {"action": "clear"}, "PatientSexNeutered": {"action": "delete"}, "PatientState": {"action": "delete"}, "PatientTransportArrangements": {"action": "delete"}, "PatientAge": {"action": "delete"}, "PatientBirthDate": {"action": "clear"}, "PatientBirthName": {"action": "delete"}, "PatientBirthTime": {"action": "delete"}, "PatientInstitutionResidence": {"action": "delete"}, "PatientInsurancePlanCodeSequence": {"action": "delete"}, "PatientMotherBirthName": {"action": "delete"}, "PatientName": {"action": "clear"}, "PatientPrimaryLanguageCodeSequence": {"action": "delete"}, "PatientPrimaryLanguageModifierCodeSequence": {"action": "delete"}, "PatientReligiousPreference": {"action": "delete"}, "PatientSex": {"action": "clear"}, "PatientSize": {"action": "delete"}, "PatientTelephoneNumbers": {"action": "delete"}, "PatientWeight": {"action": "delete"}, "PerformedLocation": {"action": "delete"}, "PerformedProcedureStepDescription": {"action": "delete"}, "PerformedProcedureStepID": {"action": "delete"}, "PerformedProcedureStepStartDate": {"action": "delete"}, "PerformedProcedureStepStartTime": {"action": "delete"}, "PerformedStationAETitle": {"action": "delete"}, "PerformedStationGeographicLocationCodeSequence": {"action": "delete"}, "PerformedStationName": {"action": "delete"}, "PerformingPhysicianIdentificationSequence": {"action": "delete"}, "PerformingPhysicianName": {"action": "delete"}, "PersonAddress": {"action": "delete"}, "PersonIdentificationCodeSequence": {"action": "hash"}, "PersonName": {"action": "hash"}, "PersonTelephoneNumbers": {"action": "delete"}, "PhysicianApprovingInterpretation": {"action": "delete"}, "PhysiciansReadingStudyIdentificationSequence": {"action": "delete"}, "PhysiciansOfRecord": {"action": "delete"}, "PhysiciansOfRecordIdentificationSequence": {"action": "delete"}, "PlacerOrderNumberImagingServiceRequest": {"action": "clear"}, "PlateID": {"action": "delete"}, "PreMedication": {"action": "delete"}, "PregnancyStatus": {"action": "delete"}, "ProtocolName": {"action": "delete"}, "ReasonForTheImagingServiceRequest": {"action": "delete"}, "ReasonForStudy": {"action": "delete"}, "ReferencedDigitalSignatureSequence": {"action": "delete"}, "ReferencedFrameOfReferenceUID": {"action": "regen"}, "ReferencedGeneralPurposeScheduledProcedureStepTransactionUID": {"action": "regen"}, "ReferencedImageSequence": {"action": "delete"}, "ReferencedPatientSequence": {"action": "delete"}, "ReferencedPerformedProcedureStepSequence": {"action": "delete"}, "ReferencedSOPInstanceMACSequence": {"action": "delete"}, "ReferencedSOPInstanceUID": {"action": "regen"}, "ReferencedSOPInstanceUIDInFile": {"action": "regen"}, "ReferencedStudySequence": {"action": "delete"}, "ReferringPhysicianAddress": {"action": "delete"}, "ReferringPhysicianIdentificationSequence": {"action": "delete"}, "ReferringPhysicianName": {"action": "clear"}, "ReferringPhysicianTelephoneNumbers": {"action": "delete"}, "RegionOfResidence": {"action": "delete"}, "RelatedFrameOfReferenceUID": {"action": "regen"}, "RequestAttributesSequence": {"action": "delete"}, "RequestedContrastAgent": {"action": "delete"}, "RequestedProcedureComments": {"action": "delete"}, "RequestedProcedureDescription": {"action": "delete"}, "RequestedProcedureID": {"action": "delete"}, "RequestedProcedureLocation": {"action": "delete"}, "RequestedSOPInstanceUID": {"action": "regen"}, "RequestingPhysician": {"action": "delete"}, "RequestingService": {"action": "delete"}, "ResponsibleOrganization": {"action": "delete"}, "ResponsiblePerson": {"action": "delete"}, "ResultsComments": {"action": "delete"}, "ResultsDistributionListSequence": {"action": "delete"}, "ResultsIDIssuer": {"action": "delete"}, "ReviewerName": {"action": "delete"}, "ScheduledHumanPerformersSequence": {"action": "delete"}, "ScheduledPatientInstitutionResidence": {"action": "delete"}, "ScheduledPerformingPhysicianIdentificationSequence": {"action": "delete"}, "ScheduledPerformingPhysicianName": {"action": "delete"}, "ScheduledProcedureStepEndDate": {"action": "delete"}, "ScheduledProcedureStepEndTime": {"action": "delete"}, "ScheduledProcedureStepDescription": {"action": "delete"}, "ScheduledProcedureStepLocation": {"action": "delete"}, "ScheduledProcedureStepStartDate": {"action": "delete"}, "ScheduledProcedureStepStartTime": {"action": "delete"}, "ScheduledStationAETitle": {"action": "delete"}, "ScheduledStationGeographicLocationCodeSequence": {"action": "delete"}, "ScheduledStationName": {"action": "delete"}, "ScheduledStationNameCodeSequence": {"action": "delete"}, "ScheduledStudyLocation": {"action": "delete"}, "ScheduledStudyLocationAETitle": {"action": "delete"}, "SeriesDate": {"action": "delete"}, "SeriesDescription": {"action": "delete"}, "SeriesInstanceUID": {"action": "regen"}, "SeriesTime": {"action": "delete"}, "ServiceEpisodeDescription": {"action": "delete"}, "ServiceEpisodeID": {"action": "delete"}, "SmokingStatus": {"action": "delete"}, "SOPInstanceUID": {"action": "regen"}, "SourceImageSequence": {"action": "delete"}, "SpecialNeeds": {"action": "delete"}, "StationName": {"action": "delete"}, "StorageMediaFileSetUID": {"action": "regen"}, "StudyComments": {"action": "delete"}, "StudyDate": {"action": "clear"}, "StudyDescription": {"action": "value", "value": "Lande^URMC"}, "StudyID": {"action": "clear"}, "StudyIDIssuer": {"action": "delete"}, "StudyInstanceUID": {"action": "regen"}, "StudyTime": {"action": "clear"}, "SynchronizationFrameOfReferenceUID": {"action": "regen"}, "TemplateExtensionCreatorUID": {"action": "regen"}, "TemplateExtensionOrganizationUID": {"action": "regen"}, "TextComments": {"action": "delete"}, "TextString": {"action": "delete"}, "TimezoneOffsetFromUTC": {"action": "delete"}, "TopicAuthor": {"action": "delete"}, "TopicKeywords": {"action": "delete"}, "TopicSubject": {"action": "delete"}, "TopicTitle": {"action": "delete"}, "TransactionUID": {"action": "regen"}, "UID": {"action": "regen"}, "VerifyingObserverIdentificationCodeSequence": {"action": "clear"}, "VerifyingObserverName": {"action": "hash"}, "VerifyingObserverSequence": {"action": "hash"}, "VerifyingOrganization": {"action": "delete"}, "VisitComments": {"action": "delete"}}, "AnonymizeVR": {}}
+  "Supplement142": {
+    "RemovePrivateTags": true,
+    "AnonymizeTag": {
+      "AccessionNumber": {
+        "action": "clear"
+      },
+      "AcquisitionComments": {
+        "action": "delete"
+      },
+      "AcquisitionContextSequence": {
+        "action": "delete"
+      },
+      "AcquisitionDate": {
+        "action": "delete"
+      },
+      "AcquisitionDateTime": {
+        "action": "delete"
+      },
+      "AcquisitionDeviceProcessingDescription": {
+        "action": "delete"
+      },
+      "AcquisitionProtocolDescription": {
+        "action": "delete"
+      },
+      "AcquisitionTime": {
+        "action": "delete"
+      },
+      "ActualHumanPerformersSequence": {
+        "action": "delete"
+      },
+      "AdditionalPatientHistory": {
+        "action": "delete"
+      },
+      "AdmissionID": {
+        "action": "delete"
+      },
+      "AdmittingDate": {
+        "action": "delete"
+      },
+      "AdmittingDiagnosesCodeSequence": {
+        "action": "delete"
+      },
+      "AdmittingDiagnosesDescription": {
+        "action": "delete"
+      },
+      "AdmittingTime": {
+        "action": "delete"
+      },
+      "AffectedSOPInstanceUID": {
+        "action": "delete"
+      },
+      "Allergies": {
+        "action": "delete"
+      },
+      "Arbitrary": {
+        "action": "delete"
+      },
+      "AuthorObserverSequence": {
+        "action": "delete"
+      },
+      "BranchOfService": {
+        "action": "delete"
+      },
+      "CassetteID": {
+        "action": "delete"
+      },
+      "CommentsOnThePerformedProcedureStep": {
+        "action": "delete"
+      },
+      "ConcatenationUID": {
+        "action": "regen"
+      },
+      "ConfidentialityConstraintOnPatientDataDescription": {
+        "action": "delete"
+      },
+      "ContentCreatorName": {
+        "action": "clear"
+      },
+      "ContentCreatorIdentificationCodeSequence": {
+        "action": "delete"
+      },
+      "ContentDate": {
+        "action": "clear"
+      },
+      "ContentSequence": {
+        "action": "delete"
+      },
+      "ContentTime": {
+        "action": "clear"
+      },
+      "ContextGroupExtensionCreatorUID": {
+        "action": "regen"
+      },
+      "ContrastBolusAgent": {
+        "action": "clear"
+      },
+      "ContributionDescription": {
+        "action": "delete"
+      },
+      "CountryOfResidence": {
+        "action": "delete"
+      },
+      "CreatorVersionUID": {
+        "action": "regen"
+      },
+      "CurrentPatientLocation": {
+        "action": "delete"
+      },
+      "CurveDate": {
+        "action": "delete"
+      },
+      "CurveTime": {
+        "action": "delete"
+      },
+      "CustodialOrganizationSequence": {
+        "action": "delete"
+      },
+      "DataSetTrailingPadding": {
+        "action": "delete"
+      },
+      "DerivationDescription": {
+        "action": "delete"
+      },
+      "DetectorID": {
+        "action": "delete"
+      },
+      "DeviceSerialNumber": {
+        "action": "delete"
+      },
+      "DeviceUID": {
+        "action": "regen"
+      },
+      "DigitalSignatureUID": {
+        "action": "delete"
+      },
+      "DigitalSignaturesSequence": {
+        "action": "delete"
+      },
+      "DimensionOrganizationUID": {
+        "action": "regen"
+      },
+      "DischargeDiagnosisDescription": {
+        "action": "delete"
+      },
+      "DistributionAddress": {
+        "action": "delete"
+      },
+      "DistributionName": {
+        "action": "delete"
+      },
+      "DoseReferenceUID": {
+        "action": "regen"
+      },
+      "EthnicGroup": {
+        "action": "delete"
+      },
+      "FailedSOPInstanceUIDList": {
+        "action": "regen"
+      },
+      "FiducialUID": {
+        "action": "regen"
+      },
+      "FillerOrderNumberImagingServiceRequest": {
+        "action": "clear"
+      },
+      "FrameComments": {
+        "action": "delete"
+      },
+      "FrameOfReferenceUID": {
+        "action": "regen"
+      },
+      "GantryID": {
+        "action": "delete"
+      },
+      "GeneratorID": {
+        "action": "delete"
+      },
+      "GraphicAnnotationSequence": {
+        "action": "hash"
+      },
+      "HumanPerformerName": {
+        "action": "delete"
+      },
+      "HumanPerformerOrganization": {
+        "action": "delete"
+      },
+      "IconImageSequence": {
+        "action": "delete"
+      },
+      "IdentifyingComments": {
+        "action": "delete"
+      },
+      "ImageComments": {
+        "action": "delete"
+      },
+      "ImagePresentationComments": {
+        "action": "delete"
+      },
+      "ImagingServiceRequestComments": {
+        "action": "delete"
+      },
+      "Impressions": {
+        "action": "delete"
+      },
+      "InstanceCreatorUID": {
+        "action": "regen"
+      },
+      "InstitutionAddress": {
+        "action": "delete"
+      },
+      "InstitutionCodeSequence": {
+        "action": "delete"
+      },
+      "InstitutionName": {
+        "action": "delete"
+      },
+      "InstitutionalDepartmentName": {
+        "action": "delete"
+      },
+      "InsurancePlanIdentification": {
+        "action": "delete"
+      },
+      "IntendedRecipientsOfResultsIdentificationSequence": {
+        "action": "delete"
+      },
+      "InterpretationApproverSequence": {
+        "action": "delete"
+      },
+      "InterpretationAuthor": {
+        "action": "delete"
+      },
+      "InterpretationDiagnosisDescription": {
+        "action": "delete"
+      },
+      "InterpretationIDIssuer": {
+        "action": "delete"
+      },
+      "InterpretationRecorder": {
+        "action": "delete"
+      },
+      "InterpretationText": {
+        "action": "delete"
+      },
+      "InterpretationTranscriber": {
+        "action": "delete"
+      },
+      "IrradiationEventUID": {
+        "action": "regen"
+      },
+      "IssuerOfAdmissionID": {
+        "action": "delete"
+      },
+      "IssuerOfPatientID": {
+        "action": "delete"
+      },
+      "IssuerOfServiceEpisodeID": {
+        "action": "delete"
+      },
+      "LargePaletteColorLookupTableUID": {
+        "action": "regen"
+      },
+      "LastMenstrualDate": {
+        "action": "delete"
+      },
+      "MAC": {
+        "action": "delete"
+      },
+      "MediaStorageSOPInstanceUID": {
+        "action": "regen"
+      },
+      "MedicalAlerts": {
+        "action": "delete"
+      },
+      "MedicalRecordLocator": {
+        "action": "delete"
+      },
+      "MilitaryRank": {
+        "action": "delete"
+      },
+      "ModifiedAttributesSequence": {
+        "action": "delete"
+      },
+      "ModifiedImageDescription": {
+        "action": "delete"
+      },
+      "ModifyingDeviceID": {
+        "action": "delete"
+      },
+      "ModifyingDeviceManufacturer": {
+        "action": "delete"
+      },
+      "NameOfPhysiciansReadingStudy": {
+        "action": "delete"
+      },
+      "NamesOfIntendedRecipientsOfResults": {
+        "action": "delete"
+      },
+      "Occupation": {
+        "action": "delete"
+      },
+      "OperatorIdentificationSequence": {
+        "action": "delete"
+      },
+      "OperatorsName": {
+        "action": "delete"
+      },
+      "OriginalAttributesSequence": {
+        "action": "delete"
+      },
+      "OrderCallbackPhoneNumber": {
+        "action": "delete"
+      },
+      "OrderEnteredBy": {
+        "action": "delete"
+      },
+      "OrderEntererLocation": {
+        "action": "delete"
+      },
+      "OtherPatientIDs": {
+        "action": "delete"
+      },
+      "OtherPatientIDsSequence": {
+        "action": "delete"
+      },
+      "OtherPatientNames": {
+        "action": "delete"
+      },
+      "": {
+        "action": "delete"
+      },
+      "HistogramSequence": {
+        "action": "delete"
+      },
+      "OverlayDate": {
+        "action": "delete"
+      },
+      "OverlayTime": {
+        "action": "delete"
+      },
+      "PaletteColorLookupTableUID": {
+        "action": "regen"
+      },
+      "ParticipantSequence": {
+        "action": "delete"
+      },
+      "PatientAddress": {
+        "action": "delete"
+      },
+      "PatientComments": {
+        "action": "delete"
+      },
+      "PatientID": {
+        "action": "clear"
+      },
+      "PatientSexNeutered": {
+        "action": "delete"
+      },
+      "PatientState": {
+        "action": "delete"
+      },
+      "PatientTransportArrangements": {
+        "action": "delete"
+      },
+      "PatientAge": {
+        "action": "delete"
+      },
+      "PatientBirthDate": {
+        "action": "clear"
+      },
+      "PatientBirthName": {
+        "action": "delete"
+      },
+      "PatientBirthTime": {
+        "action": "delete"
+      },
+      "PatientInstitutionResidence": {
+        "action": "delete"
+      },
+      "PatientInsurancePlanCodeSequence": {
+        "action": "delete"
+      },
+      "PatientMotherBirthName": {
+        "action": "delete"
+      },
+      "PatientName": {
+        "action": "clear"
+      },
+      "PatientPrimaryLanguageCodeSequence": {
+        "action": "delete"
+      },
+      "PatientPrimaryLanguageModifierCodeSequence": {
+        "action": "delete"
+      },
+      "PatientReligiousPreference": {
+        "action": "delete"
+      },
+      "PatientSex": {
+        "action": "clear"
+      },
+      "PatientSize": {
+        "action": "delete"
+      },
+      "PatientTelephoneNumbers": {
+        "action": "delete"
+      },
+      "PatientWeight": {
+        "action": "delete"
+      },
+      "PerformedLocation": {
+        "action": "delete"
+      },
+      "PerformedProcedureStepDescription": {
+        "action": "delete"
+      },
+      "PerformedProcedureStepID": {
+        "action": "delete"
+      },
+      "PerformedProcedureStepStartDate": {
+        "action": "delete"
+      },
+      "PerformedProcedureStepStartTime": {
+        "action": "delete"
+      },
+      "PerformedStationAETitle": {
+        "action": "delete"
+      },
+      "PerformedStationGeographicLocationCodeSequence": {
+        "action": "delete"
+      },
+      "PerformedStationName": {
+        "action": "delete"
+      },
+      "PerformingPhysicianIdentificationSequence": {
+        "action": "delete"
+      },
+      "PerformingPhysicianName": {
+        "action": "delete"
+      },
+      "PersonAddress": {
+        "action": "delete"
+      },
+      "PersonIdentificationCodeSequence": {
+        "action": "hash"
+      },
+      "PersonName": {
+        "action": "hash"
+      },
+      "PersonTelephoneNumbers": {
+        "action": "delete"
+      },
+      "PhysicianApprovingInterpretation": {
+        "action": "delete"
+      },
+      "PhysiciansReadingStudyIdentificationSequence": {
+        "action": "delete"
+      },
+      "PhysiciansOfRecord": {
+        "action": "delete"
+      },
+      "PhysiciansOfRecordIdentificationSequence": {
+        "action": "delete"
+      },
+      "PlacerOrderNumberImagingServiceRequest": {
+        "action": "clear"
+      },
+      "PlateID": {
+        "action": "delete"
+      },
+      "PreMedication": {
+        "action": "delete"
+      },
+      "PregnancyStatus": {
+        "action": "delete"
+      },
+      "ProtocolName": {
+        "action": "delete"
+      },
+      "ReasonForTheImagingServiceRequest": {
+        "action": "delete"
+      },
+      "ReasonForStudy": {
+        "action": "delete"
+      },
+      "ReferencedDigitalSignatureSequence": {
+        "action": "delete"
+      },
+      "ReferencedFrameOfReferenceUID": {
+        "action": "regen"
+      },
+      "ReferencedGeneralPurposeScheduledProcedureStepTransactionUID": {
+        "action": "regen"
+      },
+      "ReferencedImageSequence": {
+        "action": "delete"
+      },
+      "ReferencedPatientSequence": {
+        "action": "delete"
+      },
+      "ReferencedPerformedProcedureStepSequence": {
+        "action": "delete"
+      },
+      "ReferencedSOPInstanceMACSequence": {
+        "action": "delete"
+      },
+      "ReferencedSOPInstanceUID": {
+        "action": "regen"
+      },
+      "ReferencedSOPInstanceUIDInFile": {
+        "action": "regen"
+      },
+      "ReferencedStudySequence": {
+        "action": "delete"
+      },
+      "ReferringPhysicianAddress": {
+        "action": "delete"
+      },
+      "ReferringPhysicianIdentificationSequence": {
+        "action": "delete"
+      },
+      "ReferringPhysicianName": {
+        "action": "clear"
+      },
+      "ReferringPhysicianTelephoneNumbers": {
+        "action": "delete"
+      },
+      "RegionOfResidence": {
+        "action": "delete"
+      },
+      "RelatedFrameOfReferenceUID": {
+        "action": "regen"
+      },
+      "RequestAttributesSequence": {
+        "action": "delete"
+      },
+      "RequestedContrastAgent": {
+        "action": "delete"
+      },
+      "RequestedProcedureComments": {
+        "action": "delete"
+      },
+      "RequestedProcedureDescription": {
+        "action": "delete"
+      },
+      "RequestedProcedureID": {
+        "action": "delete"
+      },
+      "RequestedProcedureLocation": {
+        "action": "delete"
+      },
+      "RequestedSOPInstanceUID": {
+        "action": "regen"
+      },
+      "RequestingPhysician": {
+        "action": "delete"
+      },
+      "RequestingService": {
+        "action": "delete"
+      },
+      "ResponsibleOrganization": {
+        "action": "delete"
+      },
+      "ResponsiblePerson": {
+        "action": "delete"
+      },
+      "ResultsComments": {
+        "action": "delete"
+      },
+      "ResultsDistributionListSequence": {
+        "action": "delete"
+      },
+      "ResultsIDIssuer": {
+        "action": "delete"
+      },
+      "ReviewerName": {
+        "action": "delete"
+      },
+      "ScheduledHumanPerformersSequence": {
+        "action": "delete"
+      },
+      "ScheduledPatientInstitutionResidence": {
+        "action": "delete"
+      },
+      "ScheduledPerformingPhysicianIdentificationSequence": {
+        "action": "delete"
+      },
+      "ScheduledPerformingPhysicianName": {
+        "action": "delete"
+      },
+      "ScheduledProcedureStepEndDate": {
+        "action": "delete"
+      },
+      "ScheduledProcedureStepEndTime": {
+        "action": "delete"
+      },
+      "ScheduledProcedureStepDescription": {
+        "action": "delete"
+      },
+      "ScheduledProcedureStepLocation": {
+        "action": "delete"
+      },
+      "ScheduledProcedureStepStartDate": {
+        "action": "delete"
+      },
+      "ScheduledProcedureStepStartTime": {
+        "action": "delete"
+      },
+      "ScheduledStationAETitle": {
+        "action": "delete"
+      },
+      "ScheduledStationGeographicLocationCodeSequence": {
+        "action": "delete"
+      },
+      "ScheduledStationName": {
+        "action": "delete"
+      },
+      "ScheduledStationNameCodeSequence": {
+        "action": "delete"
+      },
+      "ScheduledStudyLocation": {
+        "action": "delete"
+      },
+      "ScheduledStudyLocationAETitle": {
+        "action": "delete"
+      },
+      "SeriesDate": {
+        "action": "delete"
+      },
+      "SeriesDescription": {
+        "action": "delete"
+      },
+      "SeriesInstanceUID": {
+        "action": "regen"
+      },
+      "SeriesTime": {
+        "action": "delete"
+      },
+      "ServiceEpisodeDescription": {
+        "action": "delete"
+      },
+      "ServiceEpisodeID": {
+        "action": "delete"
+      },
+      "SmokingStatus": {
+        "action": "delete"
+      },
+      "SOPInstanceUID": {
+        "action": "regen"
+      },
+      "SourceImageSequence": {
+        "action": "delete"
+      },
+      "SpecialNeeds": {
+        "action": "delete"
+      },
+      "StationName": {
+        "action": "delete"
+      },
+      "StorageMediaFileSetUID": {
+        "action": "regen"
+      },
+      "StudyComments": {
+        "action": "delete"
+      },
+      "StudyDate": {
+        "action": "clear"
+      },
+      "StudyDescription": {
+        "action": "delete"
+      },
+      "StudyID": {
+        "action": "clear"
+      },
+      "StudyIDIssuer": {
+        "action": "delete"
+      },
+      "StudyInstanceUID": {
+        "action": "regen"
+      },
+      "StudyTime": {
+        "action": "clear"
+      },
+      "SynchronizationFrameOfReferenceUID": {
+        "action": "regen"
+      },
+      "TemplateExtensionCreatorUID": {
+        "action": "regen"
+      },
+      "TemplateExtensionOrganizationUID": {
+        "action": "regen"
+      },
+      "TextComments": {
+        "action": "delete"
+      },
+      "TextString": {
+        "action": "delete"
+      },
+      "TimezoneOffsetFromUTC": {
+        "action": "delete"
+      },
+      "TopicAuthor": {
+        "action": "delete"
+      },
+      "TopicKeywords": {
+        "action": "delete"
+      },
+      "TopicSubject": {
+        "action": "delete"
+      },
+      "TopicTitle": {
+        "action": "delete"
+      },
+      "TransactionUID": {
+        "action": "regen"
+      },
+      "UID": {
+        "action": "regen"
+      },
+      "VerifyingObserverIdentificationCodeSequence": {
+        "action": "clear"
+      },
+      "VerifyingObserverName": {
+        "action": "hash"
+      },
+      "VerifyingObserverSequence": {
+        "action": "hash"
+      },
+      "VerifyingOrganization": {
+        "action": "delete"
+      },
+      "VisitComments": {
+        "action": "delete"
+      }
+    },
+    "AnonymizeVR": {}
+  },
+  "RESEARCH-LANDE": {
+    "RemovePrivateTags": true,
+    "AnonymizeTag": {
+      "AccessionNumber": {
+        "action": "clear"
+      },
+      "AcquisitionComments": {
+        "action": "delete"
+      },
+      "AcquisitionContextSequence": {
+        "action": "delete"
+      },
+      "AcquisitionDate": {
+        "action": "delete"
+      },
+      "AcquisitionDateTime": {
+        "action": "delete"
+      },
+      "AcquisitionDeviceProcessingDescription": {
+        "action": "delete"
+      },
+      "AcquisitionProtocolDescription": {
+        "action": "delete"
+      },
+      "AcquisitionTime": {
+        "action": "delete"
+      },
+      "ActualHumanPerformersSequence": {
+        "action": "delete"
+      },
+      "AdditionalPatientHistory": {
+        "action": "delete"
+      },
+      "AdmissionID": {
+        "action": "delete"
+      },
+      "AdmittingDate": {
+        "action": "delete"
+      },
+      "AdmittingDiagnosesCodeSequence": {
+        "action": "delete"
+      },
+      "AdmittingDiagnosesDescription": {
+        "action": "delete"
+      },
+      "AdmittingTime": {
+        "action": "delete"
+      },
+      "AffectedSOPInstanceUID": {
+        "action": "delete"
+      },
+      "Allergies": {
+        "action": "delete"
+      },
+      "Arbitrary": {
+        "action": "delete"
+      },
+      "AuthorObserverSequence": {
+        "action": "delete"
+      },
+      "BranchOfService": {
+        "action": "delete"
+      },
+      "CassetteID": {
+        "action": "delete"
+      },
+      "CommentsOnThePerformedProcedureStep": {
+        "action": "delete"
+      },
+      "ConcatenationUID": {
+        "action": "regen"
+      },
+      "ConfidentialityConstraintOnPatientDataDescription": {
+        "action": "delete"
+      },
+      "ContentCreatorName": {
+        "action": "clear"
+      },
+      "ContentCreatorIdentificationCodeSequence": {
+        "action": "delete"
+      },
+      "ContentDate": {
+        "action": "clear"
+      },
+      "ContentSequence": {
+        "action": "delete"
+      },
+      "ContentTime": {
+        "action": "clear"
+      },
+      "ContextGroupExtensionCreatorUID": {
+        "action": "regen"
+      },
+      "ContrastBolusAgent": {
+        "action": "clear"
+      },
+      "ContributionDescription": {
+        "action": "delete"
+      },
+      "CountryOfResidence": {
+        "action": "delete"
+      },
+      "CreatorVersionUID": {
+        "action": "regen"
+      },
+      "CurrentPatientLocation": {
+        "action": "delete"
+      },
+      "CurveDate": {
+        "action": "delete"
+      },
+      "CurveTime": {
+        "action": "delete"
+      },
+      "CustodialOrganizationSequence": {
+        "action": "delete"
+      },
+      "DataSetTrailingPadding": {
+        "action": "delete"
+      },
+      "DerivationDescription": {
+        "action": "delete"
+      },
+      "DetectorID": {
+        "action": "delete"
+      },
+      "DeviceSerialNumber": {
+        "action": "delete"
+      },
+      "DeviceUID": {
+        "action": "regen"
+      },
+      "DigitalSignatureUID": {
+        "action": "delete"
+      },
+      "DigitalSignaturesSequence": {
+        "action": "delete"
+      },
+      "DimensionOrganizationUID": {
+        "action": "regen"
+      },
+      "DischargeDiagnosisDescription": {
+        "action": "delete"
+      },
+      "DistributionAddress": {
+        "action": "delete"
+      },
+      "DistributionName": {
+        "action": "delete"
+      },
+      "DoseReferenceUID": {
+        "action": "regen"
+      },
+      "EthnicGroup": {
+        "action": "delete"
+      },
+      "FailedSOPInstanceUIDList": {
+        "action": "regen"
+      },
+      "FiducialUID": {
+        "action": "regen"
+      },
+      "FillerOrderNumberImagingServiceRequest": {
+        "action": "clear"
+      },
+      "FrameComments": {
+        "action": "delete"
+      },
+      "FrameOfReferenceUID": {
+        "action": "regen"
+      },
+      "GantryID": {
+        "action": "delete"
+      },
+      "GeneratorID": {
+        "action": "delete"
+      },
+      "GraphicAnnotationSequence": {
+        "action": "hash"
+      },
+      "HumanPerformerName": {
+        "action": "delete"
+      },
+      "HumanPerformerOrganization": {
+        "action": "delete"
+      },
+      "IconImageSequence": {
+        "action": "delete"
+      },
+      "IdentifyingComments": {
+        "action": "delete"
+      },
+      "ImageComments": {
+        "action": "delete"
+      },
+      "ImagePresentationComments": {
+        "action": "delete"
+      },
+      "ImagingServiceRequestComments": {
+        "action": "delete"
+      },
+      "Impressions": {
+        "action": "delete"
+      },
+      "InstanceCreatorUID": {
+        "action": "regen"
+      },
+      "InstitutionAddress": {
+        "action": "delete"
+      },
+      "InstitutionCodeSequence": {
+        "action": "delete"
+      },
+      "InstitutionName": {
+        "action": "delete"
+      },
+      "InstitutionalDepartmentName": {
+        "action": "delete"
+      },
+      "InsurancePlanIdentification": {
+        "action": "delete"
+      },
+      "IntendedRecipientsOfResultsIdentificationSequence": {
+        "action": "delete"
+      },
+      "InterpretationApproverSequence": {
+        "action": "delete"
+      },
+      "InterpretationAuthor": {
+        "action": "delete"
+      },
+      "InterpretationDiagnosisDescription": {
+        "action": "delete"
+      },
+      "InterpretationIDIssuer": {
+        "action": "delete"
+      },
+      "InterpretationRecorder": {
+        "action": "delete"
+      },
+      "InterpretationText": {
+        "action": "delete"
+      },
+      "InterpretationTranscriber": {
+        "action": "delete"
+      },
+      "IrradiationEventUID": {
+        "action": "regen"
+      },
+      "IssuerOfAdmissionID": {
+        "action": "delete"
+      },
+      "IssuerOfPatientID": {
+        "action": "delete"
+      },
+      "IssuerOfServiceEpisodeID": {
+        "action": "delete"
+      },
+      "LargePaletteColorLookupTableUID": {
+        "action": "regen"
+      },
+      "LastMenstrualDate": {
+        "action": "delete"
+      },
+      "MAC": {
+        "action": "delete"
+      },
+      "MediaStorageSOPInstanceUID": {
+        "action": "regen"
+      },
+      "MedicalAlerts": {
+        "action": "delete"
+      },
+      "MedicalRecordLocator": {
+        "action": "delete"
+      },
+      "MilitaryRank": {
+        "action": "delete"
+      },
+      "ModifiedAttributesSequence": {
+        "action": "delete"
+      },
+      "ModifiedImageDescription": {
+        "action": "delete"
+      },
+      "ModifyingDeviceID": {
+        "action": "delete"
+      },
+      "ModifyingDeviceManufacturer": {
+        "action": "delete"
+      },
+      "NameOfPhysiciansReadingStudy": {
+        "action": "delete"
+      },
+      "NamesOfIntendedRecipientsOfResults": {
+        "action": "delete"
+      },
+      "Occupation": {
+        "action": "delete"
+      },
+      "OperatorIdentificationSequence": {
+        "action": "delete"
+      },
+      "OperatorsName": {
+        "action": "delete"
+      },
+      "OriginalAttributesSequence": {
+        "action": "delete"
+      },
+      "OrderCallbackPhoneNumber": {
+        "action": "delete"
+      },
+      "OrderEnteredBy": {
+        "action": "delete"
+      },
+      "OrderEntererLocation": {
+        "action": "delete"
+      },
+      "OtherPatientIDs": {
+        "action": "delete"
+      },
+      "OtherPatientIDsSequence": {
+        "action": "delete"
+      },
+      "OtherPatientNames": {
+        "action": "delete"
+      },
+      "": {
+        "action": "delete"
+      },
+      "HistogramSequence": {
+        "action": "delete"
+      },
+      "OverlayDate": {
+        "action": "delete"
+      },
+      "OverlayTime": {
+        "action": "delete"
+      },
+      "PaletteColorLookupTableUID": {
+        "action": "regen"
+      },
+      "ParticipantSequence": {
+        "action": "delete"
+      },
+      "PatientAddress": {
+        "action": "delete"
+      },
+      "PatientComments": {
+        "action": "delete"
+      },
+      "PatientID": {
+        "action": "clear"
+      },
+      "PatientSexNeutered": {
+        "action": "delete"
+      },
+      "PatientState": {
+        "action": "delete"
+      },
+      "PatientTransportArrangements": {
+        "action": "delete"
+      },
+      "PatientAge": {
+        "action": "delete"
+      },
+      "PatientBirthDate": {
+        "action": "clear"
+      },
+      "PatientBirthName": {
+        "action": "delete"
+      },
+      "PatientBirthTime": {
+        "action": "delete"
+      },
+      "PatientInstitutionResidence": {
+        "action": "delete"
+      },
+      "PatientInsurancePlanCodeSequence": {
+        "action": "delete"
+      },
+      "PatientMotherBirthName": {
+        "action": "delete"
+      },
+      "PatientName": {
+        "action": "clear"
+      },
+      "PatientPrimaryLanguageCodeSequence": {
+        "action": "delete"
+      },
+      "PatientPrimaryLanguageModifierCodeSequence": {
+        "action": "delete"
+      },
+      "PatientReligiousPreference": {
+        "action": "delete"
+      },
+      "PatientSex": {
+        "action": "clear"
+      },
+      "PatientSize": {
+        "action": "delete"
+      },
+      "PatientTelephoneNumbers": {
+        "action": "delete"
+      },
+      "PatientWeight": {
+        "action": "delete"
+      },
+      "PerformedLocation": {
+        "action": "delete"
+      },
+      "PerformedProcedureStepDescription": {
+        "action": "delete"
+      },
+      "PerformedProcedureStepID": {
+        "action": "delete"
+      },
+      "PerformedProcedureStepStartDate": {
+        "action": "delete"
+      },
+      "PerformedProcedureStepStartTime": {
+        "action": "delete"
+      },
+      "PerformedStationAETitle": {
+        "action": "delete"
+      },
+      "PerformedStationGeographicLocationCodeSequence": {
+        "action": "delete"
+      },
+      "PerformedStationName": {
+        "action": "delete"
+      },
+      "PerformingPhysicianIdentificationSequence": {
+        "action": "delete"
+      },
+      "PerformingPhysicianName": {
+        "action": "delete"
+      },
+      "PersonAddress": {
+        "action": "delete"
+      },
+      "PersonIdentificationCodeSequence": {
+        "action": "hash"
+      },
+      "PersonName": {
+        "action": "hash"
+      },
+      "PersonTelephoneNumbers": {
+        "action": "delete"
+      },
+      "PhysicianApprovingInterpretation": {
+        "action": "delete"
+      },
+      "PhysiciansReadingStudyIdentificationSequence": {
+        "action": "delete"
+      },
+      "PhysiciansOfRecord": {
+        "action": "delete"
+      },
+      "PhysiciansOfRecordIdentificationSequence": {
+        "action": "delete"
+      },
+      "PlacerOrderNumberImagingServiceRequest": {
+        "action": "clear"
+      },
+      "PlateID": {
+        "action": "delete"
+      },
+      "PreMedication": {
+        "action": "delete"
+      },
+      "PregnancyStatus": {
+        "action": "delete"
+      },
+      "ProtocolName": {
+        "action": "delete"
+      },
+      "ReasonForTheImagingServiceRequest": {
+        "action": "delete"
+      },
+      "ReasonForStudy": {
+        "action": "delete"
+      },
+      "ReferencedDigitalSignatureSequence": {
+        "action": "delete"
+      },
+      "ReferencedFrameOfReferenceUID": {
+        "action": "regen"
+      },
+      "ReferencedGeneralPurposeScheduledProcedureStepTransactionUID": {
+        "action": "regen"
+      },
+      "ReferencedImageSequence": {
+        "action": "delete"
+      },
+      "ReferencedPatientSequence": {
+        "action": "delete"
+      },
+      "ReferencedPerformedProcedureStepSequence": {
+        "action": "delete"
+      },
+      "ReferencedSOPInstanceMACSequence": {
+        "action": "delete"
+      },
+      "ReferencedSOPInstanceUID": {
+        "action": "regen"
+      },
+      "ReferencedSOPInstanceUIDInFile": {
+        "action": "regen"
+      },
+      "ReferencedStudySequence": {
+        "action": "delete"
+      },
+      "ReferringPhysicianAddress": {
+        "action": "delete"
+      },
+      "ReferringPhysicianIdentificationSequence": {
+        "action": "delete"
+      },
+      "ReferringPhysicianName": {
+        "action": "clear"
+      },
+      "ReferringPhysicianTelephoneNumbers": {
+        "action": "delete"
+      },
+      "RegionOfResidence": {
+        "action": "delete"
+      },
+      "RelatedFrameOfReferenceUID": {
+        "action": "regen"
+      },
+      "RequestAttributesSequence": {
+        "action": "delete"
+      },
+      "RequestedContrastAgent": {
+        "action": "delete"
+      },
+      "RequestedProcedureComments": {
+        "action": "delete"
+      },
+      "RequestedProcedureDescription": {
+        "action": "delete"
+      },
+      "RequestedProcedureID": {
+        "action": "delete"
+      },
+      "RequestedProcedureLocation": {
+        "action": "delete"
+      },
+      "RequestedSOPInstanceUID": {
+        "action": "regen"
+      },
+      "RequestingPhysician": {
+        "action": "delete"
+      },
+      "RequestingService": {
+        "action": "delete"
+      },
+      "ResponsibleOrganization": {
+        "action": "delete"
+      },
+      "ResponsiblePerson": {
+        "action": "delete"
+      },
+      "ResultsComments": {
+        "action": "delete"
+      },
+      "ResultsDistributionListSequence": {
+        "action": "delete"
+      },
+      "ResultsIDIssuer": {
+        "action": "delete"
+      },
+      "ReviewerName": {
+        "action": "delete"
+      },
+      "ScheduledHumanPerformersSequence": {
+        "action": "delete"
+      },
+      "ScheduledPatientInstitutionResidence": {
+        "action": "delete"
+      },
+      "ScheduledPerformingPhysicianIdentificationSequence": {
+        "action": "delete"
+      },
+      "ScheduledPerformingPhysicianName": {
+        "action": "delete"
+      },
+      "ScheduledProcedureStepEndDate": {
+        "action": "delete"
+      },
+      "ScheduledProcedureStepEndTime": {
+        "action": "delete"
+      },
+      "ScheduledProcedureStepDescription": {
+        "action": "delete"
+      },
+      "ScheduledProcedureStepLocation": {
+        "action": "delete"
+      },
+      "ScheduledProcedureStepStartDate": {
+        "action": "delete"
+      },
+      "ScheduledProcedureStepStartTime": {
+        "action": "delete"
+      },
+      "ScheduledStationAETitle": {
+        "action": "delete"
+      },
+      "ScheduledStationGeographicLocationCodeSequence": {
+        "action": "delete"
+      },
+      "ScheduledStationName": {
+        "action": "delete"
+      },
+      "ScheduledStationNameCodeSequence": {
+        "action": "delete"
+      },
+      "ScheduledStudyLocation": {
+        "action": "delete"
+      },
+      "ScheduledStudyLocationAETitle": {
+        "action": "delete"
+      },
+      "SeriesDate": {
+        "action": "delete"
+      },
+      "SeriesDescription": {
+        "action": "delete"
+      },
+      "SeriesInstanceUID": {
+        "action": "regen"
+      },
+      "SeriesTime": {
+        "action": "delete"
+      },
+      "ServiceEpisodeDescription": {
+        "action": "delete"
+      },
+      "ServiceEpisodeID": {
+        "action": "delete"
+      },
+      "SmokingStatus": {
+        "action": "delete"
+      },
+      "SOPInstanceUID": {
+        "action": "regen"
+      },
+      "SourceImageSequence": {
+        "action": "delete"
+      },
+      "SpecialNeeds": {
+        "action": "delete"
+      },
+      "StationName": {
+        "action": "delete"
+      },
+      "StorageMediaFileSetUID": {
+        "action": "regen"
+      },
+      "StudyComments": {
+        "action": "delete"
+      },
+      "StudyDate": {
+        "action": "clear"
+      },
+      "StudyDescription": {
+        "action": "value",
+        "value": "Lande^URMC"
+      },
+      "StudyID": {
+        "action": "clear"
+      },
+      "StudyIDIssuer": {
+        "action": "delete"
+      },
+      "StudyInstanceUID": {
+        "action": "regen"
+      },
+      "StudyTime": {
+        "action": "clear"
+      },
+      "SynchronizationFrameOfReferenceUID": {
+        "action": "regen"
+      },
+      "TemplateExtensionCreatorUID": {
+        "action": "regen"
+      },
+      "TemplateExtensionOrganizationUID": {
+        "action": "regen"
+      },
+      "TextComments": {
+        "action": "delete"
+      },
+      "TextString": {
+        "action": "delete"
+      },
+      "TimezoneOffsetFromUTC": {
+        "action": "delete"
+      },
+      "TopicAuthor": {
+        "action": "delete"
+      },
+      "TopicKeywords": {
+        "action": "delete"
+      },
+      "TopicSubject": {
+        "action": "delete"
+      },
+      "TopicTitle": {
+        "action": "delete"
+      },
+      "TransactionUID": {
+        "action": "regen"
+      },
+      "UID": {
+        "action": "regen"
+      },
+      "VerifyingObserverIdentificationCodeSequence": {
+        "action": "clear"
+      },
+      "VerifyingObserverName": {
+        "action": "hash"
+      },
+      "VerifyingObserverSequence": {
+        "action": "hash"
+      },
+      "VerifyingOrganization": {
+        "action": "delete"
+      },
+      "VisitComments": {
+        "action": "delete"
+      }
+    },
+    "AnonymizeVR": {}
+  }
 }

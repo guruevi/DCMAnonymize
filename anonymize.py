@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 """
 Anonymize DICOM directory
 
@@ -11,6 +12,7 @@ import datetime
 import hashlib
 import json
 import os
+import subprocess
 
 import pydicom
 from pydicom.data import get_testdata_files
@@ -29,14 +31,19 @@ for r, d, f in os.walk(indir):
 if not filenames:
     exit()
 
-with open('studies.json') as json_file:
+with open('studies.json', 'r') as json_file:
     studies = json.load(json_file)
 
-with open('stations.json') as json_file:
+with open('stations.json', 'r') as json_file:
     stations = json.load(json_file)
 
 # You should change this seed for your environment
-RANDOM_UUID = "be76acfcfdb04e64ba7525dbf745fe5f"
+try:
+    with open('random.txt', 'r') as file:
+        data = file.read().replace('\n', '')
+except FileNotFoundError:
+    RANDOM_UUID = "be76acfcfdb04e64ba7525dbf745fe5f"
+
 # If you want UUID's to be consistently translated, you may want to implement a lookup table
 ORIGINAL_UUID = {}
 
@@ -88,7 +95,12 @@ for filename in filenames:
     TagDefs = StudyInfo['AnonymizeTag']
     VRDefs = StudyInfo['AnonymizeVR']
     for de in dataset.iterall():
-        tag = pydicom.datadict.get_entry(de.tag)[4]
+        try:
+            tag = pydicom.datadict.get_entry(de.tag)[4]
+        except KeyError:
+            print("Invalid DICOM Tag")
+            continue
+
         if tag in TagDefs or de.VR in VRDefs:
             if tag in TagDefs:
                 action = TagDefs[tag].get('action', 'delete')
@@ -128,3 +140,22 @@ for filename in filenames:
         i += 1
     dataset.save_as(os.path.join(outdir, "ANON%05d.DCM" % i))
     os.remove(filename)
+
+# Call DCMSend to send the DICOM to our storage
+process = subprocess.run(['/usr/bin/dcmsend',
+                 '--aetitle ANONYMIZER',
+                 '--call STORESCP',
+                 '--scan-directories',
+                 '127.0.0.1', '104',
+                 outdir])
+
+if process.returncode:
+    exit(process.returncode)
+
+for filename in os.listdir(outdir):
+    file_path = os.path.join(outdir, filename)
+    try:
+        os.unlink(file_path)
+    except Exception as e:
+        print('Failed to delete %s. Reason: %s' % (file_path, e))
+        exit(1)
