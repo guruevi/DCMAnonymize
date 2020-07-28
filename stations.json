@@ -1,0 +1,20 @@
+{
+  "default": {
+    "TagForStudy": "ProtocolName",
+    "Split": null
+  },
+  "GEMS4567": {
+    "TagForStudy": "ProtocolName",
+    "Split": null
+  },
+  "MRC35067": {
+    "TagForStudy": "StudyDescription",
+    "Split": "^",
+    "SplitIndex": 0
+  },
+  "MRC25641": {
+    "TagForStudy": "StudyDescription",
+    "Split": "^",
+    "SplitIndex": 0
+  }
+}

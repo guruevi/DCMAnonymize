@@ -1,0 +1,245 @@
+﻿"(0008,0050)",Accession Number,clear
+"(0018,4000)",Acquisition Comments,delete
+"(0040,0555)",Acquisition Context Sequence,delete
+"(0008,0022)",Acquisition Date,delete,clear
+"(0008,002A)",Acquisition DateTime,delete,hash
+"(0018,1400)",Acquisition Device Processing Description,delete,hash
+"(0018,9424)",Acquisition Protocol Description,delete
+"(0008,0032)",Acquisition Time,delete,clear
+"(0040,4035)",Actual Human Performers Sequence,delete
+"(0010,21B0)",Additional Patient's History,delete
+"(0038,0010)",Admission ID,delete
+"(0038,0020)",Admitting Date,delete
+"(0008,1084)",Admitting Diagnoses Code Sequence,delete
+"(0008,1080)",Admitting Diagnoses Description,delete
+"(0038,0021)",Admitting Time,delete
+"(0000,1000)",Affected SOP Instance UID,delete
+"(0010,2110)",Allergies,delete
+"(4000,0010)",Arbitrary,delete
+"(0040,A078)",Author Observer Sequence,delete
+"(0010,1081)",Branch of Service,delete
+"(0018,1007)",Cassette ID,delete
+"(0040,0280)",Comments on Performed Procedure Step,delete
+"(0020,9161)",Concatenation UID,regen
+"(0040,3001)",Confidentiality Constraint on Patient Data Description,delete
+"(0070,0084)",Content Creator's Name,clear
+"(0070,0086)",Content Creator's Identification Code Sequence,delete
+"(0008,0023)",Content Date,clear,hash
+"(0040,A730)",Content Sequence,delete
+"(0008,0033)",Content Time,clear,hash
+"(0008,010D)",Context Group Extension Creator UID,regen
+"(0018,0010)",Contrast Bolus Agent,clear,hash
+"(0018,A003)",Contribution Description,delete
+"(0010,2150)",Country of Residence,delete
+"(0008,9123)",Creator Version UID,regen
+"(0038,0300)",Current Patient Location,delete
+"(0008,0025)",Curve Date,delete
+"(0008,0035)",Curve Time,delete
+"(0040,A07C)",Custodial Organization Sequence,delete
+"(FFFC,FFFC)",Data Set Trailing Padding,delete
+"(0008,2111)",Derivation Description,delete
+"(0018,700A)",Detector ID,delete
+"(0018,1000)",Device Serial Number,delete,clear,hash
+"(0018,1002)",Device UID,regen
+"(0400,0100)",Digital Signature UID,delete
+"(FFFA,FFFA)",Digital Signatures Sequence,delete
+"(0020,9164)",Dimension Organization UID,regen
+"(0038,0040)",Discharge Diagnosis Description,delete
+"(4008,011A)",Distribution Address,delete
+"(4008,0119)",Distribution Name,delete
+"(300A,0013)",Dose Reference UID,regen
+"(0010,2160)",Ethnic Group,delete
+"(0008,0058)",Failed SOP Instance UID List,regen
+"(0070,031A)",Fiducial UID,regen
+"(0040,2017)",Filler Order Number of Imaging Service Request,clear
+"(0020,9158)",Frame Comments,delete
+"(0020,0052)",Frame of Reference UID,regen
+"(0018,1008)",Gantry ID,delete
+"(0018,1005)",Generator ID,delete
+"(0070,0001)",Graphic Annotation Sequence,hash
+"(0040,4037)",Human Performers Name,delete
+"(0040,4036)",Human Performers Organization,delete
+"(0088,0200)",Icon Image Sequence,delete
+"(0008,4000)",Identifying Comments,delete
+"(0020,4000)",Image Comments,delete
+"(0028,4000)",Image Presentation Comments,delete
+"(0040,2400)",Imaging Service Request Comments,delete
+"(4008,0300)",Impressions,delete
+"(0008,0014)",Instance Creator UID,regen
+"(0008,0081)",Institution Address,delete
+"(0008,0082)",Institution Code Sequence,delete,clear,hash
+"(0008,0080)",Institution Name,delete,clear,hash
+"(0008,1040)",Institutional Department Name,delete
+"(0010,1050)",Insurance Plan Identification,delete
+"(0040,1011)",Intended Recipients of Results Identification Sequence,delete
+"(4008,0111)",Interpretation Approver Sequence,delete
+"(4008,010C)",Interpretation Author,delete
+"(4008,0115)",Interpretation Diagnosis Description,delete
+"(4008,0202)",Interpretation ID Issuer,delete
+"(4008,0102)",Interpretation Recorder,delete
+"(4008,010B)",Interpretation Text,delete
+"(4008,010A)",Interpretation Transcriber,delete
+"(0008,3010)",Irradiation Event UID,regen
+"(0038,0011)",Issuer of Admission ID,delete
+"(0010,0021)",Issuer of Patient ID,delete
+"(0038,0061)",Issuer of Service Episode ID,delete
+"(0028,1214)",Large Palette Color Lookup Table UID,regen
+"(0010,21D0)",Last Menstrual Date,delete
+"(0400,0404)",MAC,delete
+"(0002,0003)",Media Storage SOP Instance UID,regen
+"(0010,2000)",Medical Alerts,delete
+"(0010,1090)",Medical Record Locator,delete
+"(0010,1080)",Military Rank,delete
+"(0400,0550)",Modified Attributes Sequence,delete
+"(0020,3406)",Modified Image Description,delete
+"(0020,3401)",Modifying Device ID,delete
+"(0020,3404)",Modifying Device Manufacturer,delete
+"(0008,1060)",Name of Physician(s) Reading Study,delete
+"(0040,1010)",Names of Intended Recipient of Results,delete
+"(0010,2180)",Occupation,delete
+"(0008,1072)",Operators' Identification Sequence,delete,hash
+"(0008,1070)",Operators' Name,delete,clear,hash
+"(0400,0561)",Original Attributes Sequence,delete
+"(0040,2010)",Order Callback Phone Number,delete
+"(0040,2008)",Order Entered By,delete
+"(0040,2009)",Order Enterer Location,delete
+"(0010,1000)",Other Patient IDs,delete
+"(0010,1002)",Other Patient IDs Sequence,delete
+"(0010,1001)",Other Patient Names,delete
+"(60xx,4000)",Overlay Comments,delete
+"(60xx,3000)",Overlay Data,delete
+"(0008,0024)",Overlay Date,delete
+"(0008,0034)",Overlay Time,delete
+"(0028,1199)",Palette Color Lookup Table UID,regen
+"(0040,A07A)",Participant Sequence,delete
+"(0010,1040)",Patient Address,delete
+"(0010,4000)",Patient Comments,delete
+"(0010,0020)",Patient ID,clear
+"(0010,2203)",Patient Sex Neutered,delete,clear
+"(0038,0500)",Patient State,delete
+"(0040,1004)",Patient Transport Arrangements,delete
+"(0010,1010)",Patient's Age,delete
+"(0010,0030)",Patient's Birth Date,clear
+"(0010,1005)",Patient's Birth Name,delete
+"(0010,0032)",Patient's Birth Time,delete
+"(0038,0400)",Patient's Institution Residence,delete
+"(0010,0050)",Patient's Insurance Plan Code Sequence,delete
+"(0010,1060)",Patient's Mother's Birth Name,delete
+"(0010,0010)",Patient's Name,clear
+"(0010,0101)",Patient's Primary Language Code Sequence,delete
+"(0010,0102)",Patient's Primary Language Modifier Code Sequence,delete
+"(0010,21F0)",Patient's Religious Preference,delete
+"(0010,0040)",Patient's Sex,clear
+"(0010,1020)",Patient's Size,delete
+"(0010,2154)",Patient's Telephone Number,delete
+"(0010,1030)",Patient's Weight,delete
+"(0040,0243)",Performed Location,delete
+"(0040,0254)",Performed Procedure Step Description,delete
+"(0040,0253)",Performed Procedure Step ID,delete
+"(0040,0244)",Performed Procedure Step Start Date,delete
+"(0040,0245)",Performed Procedure Step Start Time,delete
+"(0040,0241)",Performed Station AE Title,delete
+"(0040,4030)",Performed Station Geographic Location Code Sequence,delete
+"(0040,0242)",Performed Station Name,delete
+"(0040,0248)",Performed Station Name Code Sequence,delete
+"(0008,1052)",Performing Physicians' Identification Sequence,delete
+"(0008,1050)",Performing Physicians' Name,delete
+"(0040,1102)",Person Address,delete
+"(0040,1101)",Person Identification Code Sequence,hash
+"(0040,A123)",Person Name,hash
+"(0040,1103)",Person Telephone Numbers,delete
+"(4008,0114)",Physician Approving Interpretation,delete
+"(0008,1062)",Physician Reading Study Identification Sequence,delete
+"(0008,1048)",Physician(s) of Record,delete
+"(0008,1049)",Physician(s) of Record Identification Sequence,delete
+"(0040,2016)",Placer Order Number of Imaging Service Request,clear
+"(0018,1004)",Plate ID,delete
+"(0040,0012)",Pre-Medication,delete
+"(0010,21C0)",Pregnancy Status,delete
+"(0018,1030)",Protocol Name,delete,hash
+"(0040,2001)",Reason for Imaging Service Request,delete
+"(0032,1030)",Reason for Study,delete
+"(0400,0402)",Referenced Digital Signature Sequence,delete
+"(3006,0024)",Referenced Frame of Reference UID,regen
+"(0040,4023)",Referenced General Purpose Scheduled Procedure Step Transaction UID,regen
+"(0008,1140)",Referenced Image Sequence,delete,clear,regen
+"(0038,1234)",Referenced Patient Alias Sequence,delete
+"(0008,1120)",Referenced Patient Sequence,delete
+"(0008,1111)",Referenced Performed Procedure Step Sequence,delete,clear,hash
+"(0400,0403)",Referenced SOP Instance MAC Sequence,delete
+"(0008,1155)",Referenced SOP Instance UID,regen
+"(0004,1511)",Referenced SOP Instance UID in File,regen
+"(0008,1110)",Referenced Study Sequence,delete,clear
+"(0008,0092)",Referring Physician's Address,delete
+"(0008,0096)",Referring Physician's Identification Sequence,delete
+"(0008,0090)",Referring Physician's Name,clear
+"(0008,0094)",Referring Physician's Telephone Numbers,delete
+"(0010,2152)",Region of Residence,delete
+"(3006,00C2)",Related Frame of Reference UID,regen
+"(0040,0275)",Request Attributes Sequence,delete
+"(0032,1070)",Requested Contrast Agent,delete
+"(0040,1400)",Requested Procedure Comments,delete
+"(0032,1060)",Requested Procedure Description,delete,clear
+"(0040,1001)",Requested Procedure ID,delete
+"(0040,1005)",Requested Procedure Location,delete
+"(0000,1001)",Requested SOP Instance UID,regen
+"(0032,1032)",Requesting Physician,delete
+"(0032,1033)",Requesting Service,delete
+"(0010,2299)",Responsible Organization,delete
+"(0010,2297)",Responsible Person,delete
+"(4008,4000)",Results Comments,delete
+"(4008,0118)",Results Distribution List Sequence,delete
+"(4008,0042)",Results ID Issuer,delete
+"(300E,0008)",Reviewer Name,delete,clear
+"(0040,4034)",Scheduled Human Performers Sequence,delete
+"(0038,001E)",Scheduled Patient Institution Residence,delete
+"(0040,000B)",Scheduled Performing Physician Identification Sequence,delete
+"(0040,0006)",Scheduled Performing Physician Name,delete
+"(0040,0004)",Scheduled Procedure Step End Date,delete
+"(0040,0005)",Scheduled Procedure Step End Time,delete
+"(0040,0007)",Scheduled Procedure Step Description,delete
+"(0040,0011)",Scheduled Procedure Step Location,delete
+"(0040,0002)",Scheduled Procedure Step Start Date,delete
+"(0040,0003)",Scheduled Procedure Step Start Time,delete
+"(0040,0001)",Scheduled Station AE Title,delete
+"(0040,4027)",Scheduled Station Geographic Location Code Sequence,delete
+"(0040,0010)",Scheduled Station Name,delete
+"(0040,4025)",Scheduled Station Name Code Sequence,delete
+"(0032,1020)",Scheduled Study Location,delete
+"(0032,1021)",Scheduled Study Location AE Title,delete
+"(0008,0021)",Series Date,delete,hash
+"(0008,103E)",Series Description,delete
+"(0020,000E)",Series Instance UID,regen
+"(0008,0031)",Series Time,delete,hash
+"(0038,0062)",Service Episode Description,delete
+"(0038,0060)",Service Episode ID,delete
+"(0010,21A0)",Smoking Status,delete
+"(0008,0018)",SOP Instance UID,regen
+"(0008,2112)",Source Image Sequence,delete,clear,regen
+"(0038,0050)",Special Needs,delete
+"(0008,1010)",Station Name,delete,clear,hash
+"(0088,0140)",Storage Media File-set UID,regen
+"(0032,4000)",Study Comments,delete
+"(0008,0020)",Study Date,clear
+"(0008,1030)",Study Description,delete
+"(0020,0010)",Study ID,clear
+"(0032,0012)",Study ID Issuer,delete
+"(0020,000D)",Study Instance UID,regen
+"(0008,0030)",Study Time,clear
+"(0020,0200)",Synchronization Frame of Reference UID,regen
+"(0040,DB0D)",Template Extension Creator UID,regen
+"(0040,DB0C)",Template Extension Organization UID,regen
+"(4000,4000)",Text Comments,delete
+"(2030,0020)",Text String,delete
+"(0008,0201)",Timezone Offset From UTC,delete
+"(0088,0910)",Topic Author,delete
+"(0088,0912)",Topic Key Words,delete
+"(0088,0906)",Topic Subject,delete
+"(0088,0904)",Topic Title,delete
+"(0008,1195)",Transaction UID,regen
+"(0040,A124)",UID,regen
+"(0040,A088)",Verifying Observer Identification Code Sequence,clear
+"(0040,A075)",Verifying Observer Name,hash
+"(0040,A073)",Verifying Observer Sequence,hash
+"(0040,A027)",Verifying Organization,delete
+"(0038,4000)",Visit Comments,delete
