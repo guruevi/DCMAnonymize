@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-storescp --fork --promiscuous -od "./incoming" +uf -xcs "./anonymize.py" 5001
+/usr/bin/storescp --promiscuous -od "/home/hermes/DCMAnonymize/incoming" -ss study -tos 60 +uf -xcs "/home/hermes/DCMAnonymize/anonymize.py #p" 5001

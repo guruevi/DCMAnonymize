@@ -1,6 +1,7 @@
 {
   "Supplement142": {
     "RemovePrivateTags": true,
+    "RandomSeed": "change me",
     "AnonymizeTag": {
       "AccessionNumber": {
         "action": "clear"
