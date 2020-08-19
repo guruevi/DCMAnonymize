@@ -210,10 +210,17 @@ for filename in filenames:
         print("Processing: " + filename)
         print("Study: " + StudyName)
 
+    SAVED_TAGS = {}
     if StudyInfo['RemovePrivateTags']:
+        if StudyInfo['SavePrivateTags']:
+            for tag in StudyInfo['SavePrivateTags']:
+                SAVED_TAGS[tag] = dataset[tag]
+
         if DEBUG:
             print("Removing Private Tags")
         dataset.remove_private_tags()
+        for tag in StudyInfo['SavePrivateTags']:
+            dataset[tag] = SAVED_TAGS[tag]
 
     TagDefs = StudyInfo['AnonymizeTag']
     VRDefs = StudyInfo['AnonymizeVR']
