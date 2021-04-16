@@ -1,3 +1,6 @@
 # Project exclude paths
 /venv/
 /.idea/
+/myconfig/
+/test-data/
+
