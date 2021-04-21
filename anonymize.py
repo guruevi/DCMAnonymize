@@ -105,6 +105,15 @@ for filename in filenames:
         print("Error: " + filename + " is missing " + StationInfo['TagForStudy'])
         continue
 
+    # Filter out Phoenix ZIP Reports - Siemens PDF with all sorts of data
+    try:
+        SeriesDescription = str(dataset.data_element("SeriesDescription").value).upper()
+        if SeriesDescription == "PHOENIXZIPREPORT":
+            print("Series is a Phoenix ZIP Report and cannot be anonymized")
+            continue
+    except KeyError:
+        print("No SeriesDescription")
+
     print("Processing: " + filename)
     print("Study: " + StudyName)
 
@@ -116,12 +125,15 @@ for filename in filenames:
         if StudyInfo['SavePrivateTags']:
             for tag in StudyInfo['SavePrivateTags']:
                 print(f"Preserving Private Tag: {tag}")
-                SAVED_TAGS[tag] = dataset[tag]
+                try:
+                    SAVED_TAGS[tag] = dataset[tag]
+                except KeyError:
+                    print(f"Private Tag does not exist: {tag}")
 
         dataset.remove_private_tags()
 
         # Restore private tags
-        for tag in StudyInfo['SavePrivateTags']:
+        for tag in SAVED_TAGS:
             dataset[tag] = SAVED_TAGS[tag]
 
     TagDefs = StudyInfo['AnonymizeTag']
@@ -169,7 +181,10 @@ for filename in filenames:
 
         if action == "hash":
             salt = TagDefs[tag].get('salt', RANDOM_UUID)
-            de.value = hashtext(dataset.data_element(tag).value, salt)
+            try:
+                de.value = hashtext(dataset.data_element(tag).value, salt)
+            except KeyError:
+                print("Tag does not exist: " + tag)
             continue
 
         if action == "value":
@@ -240,11 +255,13 @@ for filename in filenames:
     newfilename = os.path.join(OUTGOING_DIR, dataset.file_meta.MediaStorageSOPInstanceUID + '.dcm')
     dataset.save_as(newfilename)
     processed.append(newfilename)
-    # Delete the original file (dangerous)
-    # os.remove(filename)
+
+    #We can delete things if we really want to
+    #os.remove(filename)
+
 
 # Call DCMSend to send the DICOM to our storage
-target_host = os.environ.get("RECEIVER_IP", "dcmsorter 104")
+target_host = os.environ.get("RECEIVER_IP", "receiver 104")
 target_aet_source = os.environ.get("AETITLE", "ANONYMIZER")
 target_aet_target = os.environ.get("RECEIVER_AET", "STORESCP")
 

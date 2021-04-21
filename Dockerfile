@@ -13,9 +13,8 @@ RUN pip install -r requirements.txt && rm requirements.txt
 RUN rm -rf /dcmtk /dcmtk-build
 RUN mkdir /in /out /reports
 COPY . /app
-RUN chmod a+x /app/receiver.sh
 VOLUME ["/app/config", "/in", "/out", "/reports"]
 ENV AETITLE="ANONYMIZER"
 ENV RECEIVER_AET="STORESCP"
-ENV RECEIVER_IP="dcmsorter 104"
+ENV RECEIVER_IP="receiver 104"
 CMD /usr/bin/python3 /app/anonymize.py /data
