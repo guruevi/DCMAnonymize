@@ -203,7 +203,8 @@ for filename in filenames:
             amount = TagDefs[tag].get('delta', None)
             if not amount:
                 seed = TagDefs[tag].get('seed', RANDOM_UUID)
-                random.seed(seed + de.value)
+                # Do not use the value for offsetting as we want everything to be offset by the same value
+                random.seed(seed)
                 # 100 year variation should be sufficient
                 amount = random.randint(-1576800000, 1576800000)
 
@@ -233,6 +234,7 @@ for filename in filenames:
 
         if action == "regen":
             seed = TagDefs[tag].get('seed', RANDOM_UUID)
+            # Use the value as the seed as we are simply regenerating, not offsetting
             random.seed(seed + de.value)
             # 100 year variation should be sufficient
             amount = random.randint(-1576800000, 1576800000)
@@ -279,4 +281,3 @@ for file_path in processed:
         os.unlink(file_path)
     except Exception as e:
         print('Failed to delete %s. Reason: %s' % (file_path, e))
-        exit(1)
