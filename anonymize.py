@@ -19,6 +19,7 @@ from datetime import datetime, timedelta
 from shlex import split
 
 import pydicom
+from pydicom.datadict import dictionary_VR
 from pydicom.errors import InvalidDicomError
 
 from dcm_functions import hashtext, time2str, date2str, datetime2str, str2time, str2date, str2datetime, \
@@ -76,6 +77,17 @@ except OSError:
 
 processed = []
 StudyName = "unknown"
+
+
+def get_key_types(studyinfo, action_type='value'):
+    listOfKeys = list()
+    listOfItems = studyinfo['AnonymizeTag'].items()
+    for item in listOfItems:
+        if item[1]['action'] == action_type:
+            listOfKeys.append(item[0])
+
+    return listOfKeys
+
 
 for filename in filenames:
     # Make sure we have a valid DICOM
@@ -140,11 +152,13 @@ for filename in filenames:
     VRDefs = StudyInfo['AnonymizeVR']
     RANDOM_UUID = StudyInfo.get('RandomSeed', ORIGINAL_UUID)
 
+
     def get_vr_action(vr):
         if vr in VRDefs:
             return VRDefs[vr].get('action', 'delete')
         # The default action is to keep the value
         return 'keep'
+
 
     def get_tag_action(tag):
         if tag in TagDefs:
@@ -152,27 +166,43 @@ for filename in filenames:
         # The default action is to keep the value
         return 'keep'
 
+
+    # Values should always be set
+    tags_to_set = get_key_types(StudyInfo, 'value')
+    for tag in tags_to_set:
+        value = TagDefs[tag].get('value', None)
+        if value == "TMnow":
+            value = time2str(NOW)
+        elif value == "DAnow":
+            value = date2str(NOW)
+        elif value == "DTnow":
+            value = datetime2str(NOW)
+
+        # This apparently overwrites existing tags
+        dataset.add_new(tag, dictionary_VR(tag), value)
+
     for de in dataset.iterall():
         try:
             tag = pydicom.datadict.get_entry(de.tag)[4]
         except KeyError:
-            print("Invalid DICOM Tag")
+            print(f"{de.tag} -> keep (Invalid Tag)")
             continue
 
         # We can take action on the entire VR
         action = get_vr_action(de.VR)
         # The tag action overrides VR
         action = get_tag_action(tag)
+        print(f"{tag} -> {action}")
 
         if action == "keep":
+            # Do nothing
             continue
 
-        print(f"{tag} -> {action}")
         if action == "delete":
             try:
                 delattr(dataset, tag)
             except AttributeError:
-                print("Parent Already Deleted: " + tag)
+                print(f"{tag} no longer exists - parent deleted?")
             continue
 
         if action == "clear":
@@ -184,19 +214,7 @@ for filename in filenames:
             try:
                 de.value = hashtext(dataset.data_element(tag).value, salt)
             except KeyError:
-                print("Tag does not exist: " + tag)
-            continue
-
-        if action == "value":
-            value = TagDefs[tag].get('value', None)
-            if value == "TMnow":
-                de.value = time2str(NOW)
-            elif value == "DAnow":
-                de.value = date2str(NOW)
-            elif value == "DTnow":
-                de.value = datetime2str(NOW)
-            else:
-                de.value = value
+                print(f"{tag} no longer exists - parent deleted?")
             continue
 
         if action == "offset":
@@ -229,7 +247,8 @@ for filename in filenames:
                 de.value = datetime2str(time)
                 continue
 
-            print("Offsetting a " + de.VR + " Type Not Implemented")
+            print(f"{tag} -> Changed from {action} to keep (Error)")
+            print(f"ERROR: Offsetting a {de.VR} Not Implemented")
             continue
 
         if action == "regen":
@@ -249,7 +268,8 @@ for filename in filenames:
                 de.value = regenuid(de.value, seed)
             continue
 
-        print(f"Tag Action Not Implemented: {action}")
+        print(f"{tag} -> Changed from {action} to keep (Error)")
+        print(f"ERROR: Action Not Implemented: {action}")
 
     # We need to always regen some File MetaData that is identifiable
     dataset.file_meta.MediaStorageSOPInstanceUID = regenuid(dataset.file_meta.MediaStorageSOPInstanceUID, RANDOM_UUID)
@@ -258,9 +278,8 @@ for filename in filenames:
     dataset.save_as(newfilename)
     processed.append(newfilename)
 
-    #We can delete things if we really want to
-    #os.remove(filename)
-
+    # We can delete things if we really want to
+    # os.remove(filename)
 
 # Call DCMSend to send the DICOM to our storage
 target_host = os.environ.get("RECEIVER_IP", "receiver 104")

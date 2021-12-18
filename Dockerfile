@@ -16,5 +16,5 @@ COPY . /app
 VOLUME ["/app/config", "/in", "/out", "/reports"]
 ENV AETITLE="ANONYMIZER"
 ENV RECEIVER_AET="STORESCP"
-ENV RECEIVER_IP="receiver 104"
+ENV RECEIVER_IP="dicom 104"
 CMD /usr/bin/python3 /app/anonymize.py /data
