@@ -59,6 +59,8 @@ The default index is Supplement142 which is *based* on DICOM Supplement 142: Cli
 <pre>{
   "Supplement142": { <-- Name of the Study (eg. ProtocolName, see stations.json), defaults to Supplement142 otherwise
      "RemovePrivateTags": true, <-- Whether to remove "Private" (non-default) DICOM tags
+     "SavePrivateTags": [], <-- A list of private tags you want to keep for eg. data analysis. 
+                                May be necessary to extract DTI and this may differ from scanner to scanner.
      "RandomSeed": 'a random string', <-- A random seed/salt to be used by this study, you can set one here, or uniquely 
                                           for each DICOM tag. If you set neither, the default at the top of the script
                                           will be used, which will be the same for all studies and tags that do not have
@@ -84,7 +86,7 @@ The default index is Supplement142 which is *based* on DICOM Supplement 142: Cli
 #### delete
 Delete the tag completely, this is the default action if the tag is defined but no action is specified
 #### clear
-Clear/Empty the tag. The tag exists but is blanked.
+Clear/Empty the tag. The tag will still exist but will have no value.
 #### hash
 Hash the value (SHA256), optionally specify salt to salt with a specific string otherwise RandomSeed in the studies.json 
 or the global variable RANDOM_UUID will be used (in order of preference).
@@ -98,6 +100,7 @@ Set the Tag to a specific value, pass value to specify what string it should be.
 <pre>{ "action": "value", "value": "string" }</pre>
 If you set the value to *DTnow*, *DAnow* or *TMnow*, it will generate a DateTime, Date or Time string based on when the 
 script started running (the entire directory will have the same time)
+If the DICOM file does not have the tag already, it will be added.
 #### offset
 Offset the tag with a deterministic random value or a fixed offset.
 

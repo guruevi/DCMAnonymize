@@ -27,7 +27,7 @@ from dcm_functions import hashtext, time2str, date2str, datetime2str, str2time, 
 
 if len(sys.argv) < 2:
     print("Must pass path to the directory to be anonymized")
-    exit(1)
+    sys.exit(1)
 
 INCOMING_DIR = sys.argv[1]
 OUTGOING_DIR = "/out"
@@ -44,7 +44,7 @@ try:
         stations = json.load(json_file)
 except FileNotFoundError:
     print("No studies.json and stations.json found")
-    exit(1)
+    sys.exit(1)
 
 # You should change this seed for your environment
 try:
@@ -66,14 +66,14 @@ for r, d, f in os.walk(INCOMING_DIR):
 
 if not filenames:
     print("No files found to be processed")
-    exit(0)
+    sys.exit(0)
 
 OUTGOING_DIR = os.path.join(OUTGOING_DIR, datetime.strftime(NOW, "%Y%m%d-%H%M%S-%f"))
 try:
-    os.mkdir(OUTGOING_DIR)
+    os.makedirs(OUTGOING_DIR)
 except OSError:
     print("Creation of the output directory %s failed" % OUTGOING_DIR)
-    exit(1)
+    sys.exit(1)
 
 processed = []
 StudyName = "unknown"
@@ -293,7 +293,7 @@ process = subprocess.run(split(command))
 
 if process.returncode:
     print(f"Error occurred calling dcmsend: {process.returncode}")
-    exit(process.returncode)
+    sys.exit(process.returncode)
 
 for file_path in processed:
     try:
