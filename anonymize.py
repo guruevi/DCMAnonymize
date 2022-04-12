@@ -17,6 +17,7 @@ import subprocess
 import sys
 from datetime import datetime, timedelta
 from shlex import split
+from time import sleep
 
 import pydicom
 from pydicom.datadict import dictionary_VR
@@ -281,18 +282,29 @@ for filename in filenames:
     # We can delete things if we really want to
     # os.remove(filename)
 
-# Call DCMSend to send the DICOM to our storage
-target_host = os.environ.get("RECEIVER_IP", "receiver 104")
-target_aet_source = os.environ.get("AETITLE", "ANONYMIZER")
-target_aet_target = os.environ.get("RECEIVER_AET", "STORESCP")
 
-dcmsend_status_file = os.path.join(REPORT_DIR, f"report-{StudyName}" + datetime.strftime(NOW, "%Y%m%d-%H%M%S-%f"))
-command = f"dcmsend {target_host} +sd {OUTGOING_DIR} +r -aet {target_aet_source} -aec {target_aet_target}" \
-          f" -nuc +sp '*.dcm' -to 60 +crf {dcmsend_status_file}"
-process = subprocess.run(split(command))
+def dcm_send():
+    # Call DCMSend to send the DICOM to our storage
+    target_host = os.environ.get("RECEIVER_IP", "receiver 104")
+    target_aet_source = os.environ.get("AETITLE", "ANONYMIZER")
+    target_aet_target = os.environ.get("RECEIVER_AET", "STORESCP")
+
+    dcmsend_status_file = os.path.join(REPORT_DIR, f"report-{StudyName}" + datetime.strftime(NOW, "%Y%m%d-%H%M%S-%f"))
+    command = f"dcmsend {target_host} +sd {OUTGOING_DIR} +r -aet {target_aet_source} -aec {target_aet_target}" \
+              f" -nuc +sp '*.dcm' -to 60 +crf {dcmsend_status_file}"
+    print(f"Command: {command}")
+    return subprocess.run(split(command))
+
+
+process = dcm_send()
 
 if process.returncode:
-    print(f"Error occurred calling dcmsend: {process.returncode}")
+    retries = 0
+    while retries < 10 and process.returncode:
+        retries += 1
+        print(f"Error occurred calling dcmsend: {process.returncode} - {retries}/10")
+        sleep(60)
+        process = dcm_send()
     sys.exit(process.returncode)
 
 for file_path in processed:
