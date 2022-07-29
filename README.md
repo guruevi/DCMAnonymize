@@ -3,8 +3,7 @@
 ## (anonymize.py)
 
 This script anonymizes medical DICOM images in a directory (provided by the first argument) and copies the
-anonymized version into an outgoing folder for research studies. It then uses DCMTK's dcmsend command to send to a DICOM
-receiver.
+anonymized version into an outgoing folder for research studies.
 
 The script can process DICOMs from many modalities. Each modality may have its own intricacies on how it identifies a 
 DICOM as part of a particular research study.
@@ -14,8 +13,8 @@ or disclose the values contained in the scripts after making public the anonymiz
 breach of confidentiality.
  
 ### random.txt
-A random string to override the RANDOM_UUID hardcoded in the script.
- 
+A random string which will be used as a basis for a seed
+
 ### stations.json
 This files contains StationName definitions.
 <pre>
@@ -35,7 +34,7 @@ This files contains StationName definitions.
 ### studies.json:
 This file contains the Studies definition
 
-####PLEASE NOTE:
+#### PLEASE NOTE:
 All random values are deterministic based on the random seeds and fixed salts you specify in the configuration file. 
 This makes the script able to regenerate the same values on every run, so longitudinal studies and inter-frame DICOM 
 files can be identified and analyzed. People with access to original data as well as the anonymized may be able to 
