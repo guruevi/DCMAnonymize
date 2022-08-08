@@ -331,6 +331,7 @@ for old_series_uid in series:
                 continue
         except KeyError:
             print("No SeriesDescription")
+            continue
 
         print("Processing: " + filename)
         print("Study: " + StudyName)
