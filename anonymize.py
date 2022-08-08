@@ -166,16 +166,16 @@ def anonymize_dicom_file(this_dataset, global_random_uuid, study_info):
         this_dataset.add_new(tag, dictionary_VR(tag), value)
 
     # pydicom dataset is a dict which contains DataElement instances
-    for data_element in this_dataset.iterall():
+    for this_data_element in this_dataset.iterall():
         # Check whether this data_element is a valid DICOM tag (is in pydicom data dictionary)
         try:
-            tag = pydicom.datadict.get_entry(data_element.tag)[4]
+            tag = pydicom.datadict.get_entry(this_data_element.tag)[4]
         except KeyError:
-            print(f"{data_element.tag} -> keep (Invalid Tag)")
+            print(f"{this_data_element.tag} -> keep (Invalid Tag)")
             continue
 
         # Get the action for the entire VR
-        action = get_vr_action(data_element.VR, study_info['AnonymizeVR'])
+        action = get_vr_action(this_data_element.VR, study_info['AnonymizeVR'])
         tag_action = get_tag_action(tag, study_info['AnonymizeTag'])
         # The tag action overrides VR
         if tag_action:
@@ -201,7 +201,7 @@ def anonymize_dicom_file(this_dataset, global_random_uuid, study_info):
         # Clear (keeps the tag, but sets the tag value to nothing)
         if action == "clear":
             try:
-                data_element.value = None
+                this_data_element.value = None
             except KeyError:
                 print(f"{tag} no longer exists - parent deleted?")
             continue
@@ -210,7 +210,7 @@ def anonymize_dicom_file(this_dataset, global_random_uuid, study_info):
         if action == "hash":
             salt = study_info['AnonymizeTag'][tag].get('salt', study_random_uuid)
             try:
-                data_element.value = hashtext(this_dataset.data_element(tag).value, salt)
+                this_data_element.value = hashtext(this_dataset.data_element(tag).value, salt)
             except KeyError:
                 print(f"{tag} no longer exists - parent deleted?")
             continue
@@ -235,46 +235,46 @@ def anonymize_dicom_file(this_dataset, global_random_uuid, study_info):
             # UL: TODO (Unsigned Long)
             # US: TODO (Unsigned Short)
 
-            if data_element.VR == "TM":
-                time = str2time(data_element.value)
+            if this_data_element.VR == "TM":
+                time = str2time(this_data_element.value)
                 # List = h, m, s, ms
                 time = time + timedelta(seconds=amount)
-                data_element.value = time2str(time)
+                this_data_element.value = time2str(time)
                 continue
 
-            if data_element.VR == "DA":
-                time = str2date(data_element.value)
+            if this_data_element.VR == "DA":
+                time = str2date(this_data_element.value)
                 # List = h, m, s, ms
                 time = time + timedelta(seconds=amount)
-                data_element.value = date2str(time)
+                this_data_element.value = date2str(time)
                 continue
 
-            if data_element.VR == "DT":
-                time = str2datetime(data_element.value)
+            if this_data_element.VR == "DT":
+                time = str2datetime(this_data_element.value)
                 # List = h, m, s, ms
                 time = time + timedelta(seconds=amount)
-                data_element.value = datetime2str(time)
+                this_data_element.value = datetime2str(time)
                 continue
 
             print(f"{tag} -> Changed from {action} to keep (Error)")
-            print(f"ERROR: Offsetting a {data_element.VR} Not Implemented")
+            print(f"ERROR: Offsetting a {this_data_element.VR} Not Implemented")
             continue
 
         if action == "regen":
             seed = study_info['AnonymizeTag'][tag].get('seed', study_random_uuid)
             # Use the value as the seed as we are simply regenerating, not offsetting
-            random.seed(seed + data_element.value)
+            random.seed(seed + this_data_element.value)
             # 100 year variation should be sufficient
             amount = random.randint(-1576800000, 1576800000)
             time = NOW + timedelta(seconds=amount)
-            if data_element.VR == "TM":
-                data_element.value = time2str(time)
-            elif data_element.VR == "DA":
-                data_element.value = date2str(time)
-            elif data_element.VR == "DT":
-                data_element.value = datetime2str(time)
+            if this_data_element.VR == "TM":
+                this_data_element.value = time2str(time)
+            elif this_data_element.VR == "DA":
+                this_data_element.value = date2str(time)
+            elif this_data_element.VR == "DT":
+                this_data_element.value = datetime2str(time)
             else:
-                data_element.value = regenuid(data_element.value, seed)
+                this_data_element.value = regenuid(this_data_element.value, seed)
             continue
 
         print(f"{tag} -> Changed from {action} to keep (Error)")
