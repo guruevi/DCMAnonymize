@@ -28,7 +28,7 @@ INCOMING_DIR = os.environ.get("MERCURE_IN_DIR", "/in")
 OUTGOING_DIR = os.environ.get("MERCURE_OUT_DIR", "/out")
 
 # Whether we want Mercure-specific things such as task.json to load. If not, set to False
-DO_MERCURE_STUFF = os.environ.get("DO_MERCURE_STUFF", True)
+DO_MERCURE_STUFF = int(os.environ.get("DO_MERCURE_STUFF", True))
 
 # Find out where "we" live at runtime. This increases portability.
 app_path = Path(__file__).parent.absolute()
