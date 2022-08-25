@@ -80,16 +80,17 @@ NOW = datetime.now()
 series = {}
 
 # Scan the incoming directory for files
-for entry in os.scandir(INCOMING_DIR):
-    # Filter out DICOM files
-    if entry.name.endswith(".dcm") and not entry.is_dir():
-        # Get the Series UID from the file name, this is based on the DCMTK storescp naming convention
-        seriesString = entry.name.split("#", 1)[0]
-        # If this is the first image of the series, create new file list for the series
-        if seriesString not in series.keys():
-            series[seriesString] = []
-        # Add the current file to the file list
-        series[seriesString].append(entry.name)
+for root, _, files in os.walk(INCOMING_DIR):
+    for entry in files:
+        # Filter out DICOM files
+        if entry.endswith((".dcm", ".ima", ".DCM", ".IMA")):
+            # Get the Series UID from the file name, this is based on the DCMTK storescp naming convention
+            seriesString = entry.split("#", 1)[0]
+            # If this is the first image of the series, create new file list for the series
+            if seriesString not in series.keys():
+                series[seriesString] = []
+            # Add the current file to the file list
+            series[seriesString].append(f"{root}/{entry}")
 
 # Nothing to be done
 if not series:
