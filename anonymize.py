@@ -80,7 +80,7 @@ NOW = datetime.now()
 series = {}
 
 # Scan the incoming directory for files
-for root, _, files in os.walk(INCOMING_DIR):
+for root, dir, files in os.walk(INCOMING_DIR):
     for entry in files:
         # Filter out DICOM files
         if entry.endswith((".dcm", ".ima", ".DCM", ".IMA")):
@@ -90,7 +90,7 @@ for root, _, files in os.walk(INCOMING_DIR):
             if seriesString not in series.keys():
                 series[seriesString] = []
             # Add the current file to the file list
-            series[seriesString].append(f"{root}/{entry}")
+            series[seriesString].append(os.path.join(root, entry))
 
 # Nothing to be done
 if not series:
@@ -300,7 +300,7 @@ for old_series_uid in series:
     for filename in series[old_series_uid]:
         # Make sure the file we have is a valid DICOM. pydicom bubbles up an exception
         try:
-            dataset = pydicom.filereader.dcmread(f"{INCOMING_DIR}/{filename}")
+            dataset = pydicom.filereader.dcmread(filename)
         except InvalidDicomError:
             print("Error: " + filename +
                   " is missing DICOM File Meta Information header or the 'DICM' prefix is missing from the header.")
