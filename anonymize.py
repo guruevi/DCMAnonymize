@@ -151,6 +151,8 @@ def anonymize_dicom_file(this_dataset, global_random_uuid, study_info):
 
     # See if our Study overrides our default random seed
     study_random_uuid = study_info.get('RandomSeed', global_random_uuid)
+
+    # Action = value
     # Values should always be set
     tags_to_set = get_key_types(study_info, 'value')
     for tag in tags_to_set:
