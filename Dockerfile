@@ -1,6 +1,6 @@
-FROM alpine:latest
-RUN apk update
-RUN apk add --no-cache python3 py-pip
+FROM ubuntu:latest
+RUN apt update
+RUN apt install -y python3 python3-pip dcmtk
 COPY . /app
 RUN pip install -r /app/requirements.txt
 VOLUME ["/app/config"]

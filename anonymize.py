@@ -20,12 +20,14 @@ from pydicom.datadict import dictionary_VR
 from pydicom.errors import InvalidDicomError
 from dcm_functions import hashtext, time2str, date2str, datetime2str, str2time, str2date, str2datetime, \
     regenuid
+import subprocess
 
 # Define where our incoming and outgoing data are going to live
 # I am using environment variables here to be able to modify using Docker
 # The peculiar name picked is because we want to also use this in conjunction with Mercure DICOM router
 INCOMING_DIR = os.environ.get("MERCURE_IN_DIR", "/in")
 OUTGOING_DIR = os.environ.get("MERCURE_OUT_DIR", "/out")
+RECEIVER_IP = os.environ.get("RECEIVER_IP", False)
 
 # Whether we want Mercure-specific things such as task.json to load. If not, set to False
 DO_MERCURE_STUFF = int(os.environ.get("DO_MERCURE_STUFF", True))
@@ -339,3 +341,14 @@ for old_series_uid in series:
         print("Study: " + StudyName)
 
         anonymize_dicom_file(dataset, RANDOM_UUID, StudyInfo)
+
+# If we have a destination, send the files
+if RECEIVER_IP:
+    # Call dcmsend to send the series to the destination
+    command = f"dcmsend -v -aet ANONYMIZER {RECEIVER_IP} --scan-directories --recurse {OUTGOING_DIR}"
+    # Execute the command and print the error and output
+    process = subprocess.Popen(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=True)
+    output, error = process.communicate()
+    print(output.decode())
+    print(error.decode())
+
