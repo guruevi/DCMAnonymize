@@ -218,6 +218,13 @@ def anonymize_dicom_file(this_dataset, global_random_uuid, study_info):
                 print(f"{tag} no longer exists - parent deleted?")
             continue
 
+        if action == "value":
+            try:
+                this_data_element.value = study_info['AnonymizeTag'][tag].get('value', None)
+            except KeyError:
+                print(f"{tag} no longer exists - parent deleted?")
+            continue
+
         # Offset the integer value within the tag by a set amount
         if action == "offset":
             amount = study_info['AnonymizeTag'][tag].get('delta', None)
