@@ -83,6 +83,8 @@ NOW = datetime.now()
 # Add the current date and time to the outgoing directory with milliseconds
 # This is to prevent overwriting of data
 OUTGOING_DIR = os.path.join(OUTGOING_DIR, NOW.strftime("%Y%m%d-%H%M%S-%f"))
+# Create directory
+os.mkdir(OUTGOING_DIR)
 
 # Empty series
 series = {}
