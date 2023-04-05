@@ -43,6 +43,8 @@ if not Path(INCOMING_DIR).exists() or not Path(OUTGOING_DIR).exists():
     print("IN/OUT paths do not exist")
     sys.exit(1)
 
+
+
 # Check and see whether we have a studies and stations configuration
 # studies.json contains the study de-identification configuration
 # stations.json contains the configuration to decode the study name from a particular scanner
@@ -77,6 +79,10 @@ if DO_MERCURE_STUFF and task.get("process", False):
 
 # Keep track of when we start
 NOW = datetime.now()
+
+# Add the current date and time to the outgoing directory with milliseconds
+# This is to prevent overwriting of data
+OUTGOING_DIR = os.path.join(OUTGOING_DIR, NOW.strftime("%Y%m%d-%H%M%S-%f"))
 
 # Empty series
 series = {}
